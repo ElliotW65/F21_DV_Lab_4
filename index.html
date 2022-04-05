@@ -75,10 +75,6 @@
                 xmlHttp.send(null);
             }
 
-            var coords = {}
-
-            var countryStatic = "";
-
 
             function returnCenter(data) {
                 
@@ -91,8 +87,6 @@
                 }
 
                 console.log(country);
-
-                countryStatic = country;
             }
 
 
@@ -124,7 +118,12 @@
                     return newGroups;
                 }
 
+
                 var countryData = groupByCountry(data);
+
+                console.log(Object.keys(countryData));
+
+                console.log("Brazil: ", countryData['US']);
 
                 map.on('click', function(e) {
 
@@ -132,12 +131,25 @@
 
                     httpGetAsync(e, returnCenter);
 
-                    console.log(countryStatic);
+                    function returnCenter(data) {
+                
+                        const info = JSON.parse(data);
 
-                    new mapboxgl.Popup()
-                    .setLngLat(e.lngLat)
-                    .setHTML(countryData[countryStatic])
-                    .addTo(map);
+                        console.log(info);
+
+                        for(i of info.features) {
+                            if(i.place_type[0] == "country") {
+                                var country = i.place_name;
+                            }
+                        }
+
+                        new mapboxgl.Popup()
+                        .setLngLat(e.lngLat)
+                        .setHTML(countryData[country])
+                        .addTo(map);
+
+                        console.log(country);
+                    }
 
                 });
 
