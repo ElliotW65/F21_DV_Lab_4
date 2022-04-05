@@ -103,6 +103,39 @@
             }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+            d3.csv('bp-stats-review-2021-consolidated-dataset-panel-format.csv').then(function(data) {
+
+                console.log(data);
+
+                function groupByCountry(data) {
+                    const newGroups = data.reduce(function(groups, item) {
+                    const group = (groups[item.Country] || []);
+                    group.push(item);
+                    groups[item.Country] = group;
+                    return groups;
+                    }, {});
+
+                    return newGroups;
+                }
+
+                console.log(groupByCountry(data));
+
+            });
+
+
         </script>
 
     </head>
