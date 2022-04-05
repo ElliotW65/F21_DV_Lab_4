@@ -44,28 +44,21 @@
             .attr("width", "100%")
             .attr("height", "100%")
             .style("position", "absolute")
-            .style("z-index", 2); // Ensure svg is on top of the map so it is visible
+            .style("z-index", 2); // Ensure svg is on top of the map so it is visible       
+
 
             map.on('click', function(e) {
 
                 var coords = [e.lngLat.lng, e.lngLat.lat]
-                console.log([e.lngLat]);
 
                 httpGetAsync(e, returnCenter);
 
-                var marker = new mapboxgl.Marker({
-                draggable: true,
-                color: "#47A7E6"
-                })
-                .setLngLat(coords)
-                .setPopup(new mapboxgl.Popup({
-                    className: "tpopup",
-                    anchor: 'bottom-left',   // To show popup on top
-                    //offset: { 'bottom': [20, -20]}
-                }).setHTML('Loading...')).addTo(map);
+                new mapboxgl.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML("Working")
+                .addTo(map);
 
             });
-
 
             var link = "https://api.mapbox.com/geocoding/v5/mapbox.places/United%20Kingdom.json?access_token=pk.eyJ1IjoiZWxsaW90dzY1IiwiYSI6ImNrbGk0amV4MTA5bHUycW5tN2JzM3J0bTIifQ.OGT4ltSNZ7vyd_yEUg8afQ"
 
@@ -79,7 +72,6 @@
                     var countryFormat = urlFormat(country);
                     var urlPrefix = "https://api.mapbox.com/geocoding/v5/mapbox.places/";
                     var accessToken = ".json?access_token=pk.eyJ1IjoiZWxsaW90dzY1IiwiYSI6ImNrbGk0amV4MTA5bHUycW5tN2JzM3J0bTIifQ.OGT4ltSNZ7vyd_yEUg8afQ";
-                    console.log(urlPrefix + countryFormat[0] + "," + countryFormat[1] + accessToken);
                     return urlPrefix + countryFormat[0] + "," + countryFormat[1] + accessToken;
             }
 
@@ -100,25 +92,14 @@
             function returnCenter(data) {
                 
                 const info = JSON.parse(data);
-                console.log(info);
 
                 for(i of info.features) {
-                    console.log(i);
                     if(i.place_type[0] == "country") {
-                        console.log(i.place_name);
+                        var country = i.place_name;
                     }
                 }
 
-                //console.log(info.features[5].place_name);
-            }
-
-            function getCoordinates(data) {
-                    for(i in data) {
-                        const countryInd = i;
-                        //const url = urlBuilder(i);
-                        var center = httpGetAsync(i, returnCenter)
-                       //break;
-                    }
+                console.log(country);
             }
 
 
