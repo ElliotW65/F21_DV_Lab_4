@@ -47,18 +47,7 @@
             .style("z-index", 2); // Ensure svg is on top of the map so it is visible       
 
 
-            map.on('click', function(e) {
 
-                var coords = [e.lngLat.lng, e.lngLat.lat]
-
-                httpGetAsync(e, returnCenter);
-
-                new mapboxgl.Popup()
-                .setLngLat(e.lngLat)
-                .setHTML("Working")
-                .addTo(map);
-
-            });
 
             var link = "https://api.mapbox.com/geocoding/v5/mapbox.places/United%20Kingdom.json?access_token=pk.eyJ1IjoiZWxsaW90dzY1IiwiYSI6ImNrbGk0amV4MTA5bHUycW5tN2JzM3J0bTIifQ.OGT4ltSNZ7vyd_yEUg8afQ"
 
@@ -88,6 +77,8 @@
 
             var coords = {}
 
+            var countryStatic = "";
+
 
             function returnCenter(data) {
                 
@@ -100,6 +91,8 @@
                 }
 
                 console.log(country);
+
+                countryStatic = country;
             }
 
 
@@ -131,7 +124,22 @@
                     return newGroups;
                 }
 
-                console.log(groupByCountry(data));
+                var countryData = groupByCountry(data);
+
+                map.on('click', function(e) {
+
+                    var coords = [e.lngLat.lng, e.lngLat.lat]
+
+                    httpGetAsync(e, returnCenter);
+
+                    console.log(countryStatic);
+
+                    new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML(countryData[countryStatic])
+                    .addTo(map);
+
+                });
 
             });
 
