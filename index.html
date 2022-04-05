@@ -143,10 +143,32 @@
                             }
                         }
 
+                        const displayData = countryData[country];
+
                         new mapboxgl.Popup()
                         .setLngLat(e.lngLat)
-                        .setHTML(countryData[country])
+                        .setHTML("<svg height=300 width = 300 id='pop-up'></svg>")
                         .addTo(map);
+
+                        console.log(displayData);
+
+                        var x = d3.scaleBand().range([0, 300]).padding(0.4);
+                        var y = d3.scaleLinear().range([300, 0]);
+
+                        x.domain( displayData.map(function(d) { return d.year; }) );
+                        y.domain([0, d3.max(displayData, function(d) { return d.pop; })]);
+
+                        var g = d3.select('#pop-up')
+                                .append('g');
+
+                        const xAxis = g.append("g")
+                        .attr("transform", "translate(0," + 300 + ")")
+                        .call(d3.axisBottom(x))
+                            .selectAll("text")
+                            .style("text-anchor", "end")
+                            .attr("dx", "-.8em")
+                            .attr("dy", ".15em")
+                            .attr("transform", "rotate(-65)");
 
                         console.log(country);
                     }
