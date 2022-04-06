@@ -9,20 +9,24 @@
         <style>
             body { margin: 0; padding: 0; }
             #map { position: absolute; top: 0; bottom: 0; height: 100%; width: 100%; }
+            #pop-up {width: 50%; height: 50%; position: absolute;}
+            #pop-up-bar-chart {width: 90%; height: 90%; margin: auto;}
 
         </style>
 
     <body>
-        <div id="map"></div>
+        <div id="pop-up">
+            <div id="pop-up-bar-chart"></div>
+        </div>
 
         <script> 
 
             var link = "https://api.mapbox.com/geocoding/v5/mapbox.places/United%20Kingdom.json?access_token=pk.eyJ1IjoiZWxsaW90dzY1IiwiYSI6ImNrbGk0amV4MTA5bHUycW5tN2JzM3J0bTIifQ.OGT4ltSNZ7vyd_yEUg8afQ"
 
             function urlFormat(e) {
-                var coords = [e.lngLat.lng, e.lngLat.lat]
+                //var coords = [e.lngLat.lng, e.lngLat.lat]
 
-                return coords;
+                return e;
             }
 
             function urlBuilder(country) {
@@ -57,7 +61,7 @@
                 console.log(country);
             }
 
-            d3.csv('bp-stats-review-2021-consolidated-dataset-panel-format.csv').then(function(data) {
+            d3.csv('iea data format.csv').then(function(data) {
 
                 console.log(data);
 
@@ -75,59 +79,51 @@
 
                 var countryData = groupByCountry(data);
 
-                console.log(Object.keys(countryData));
+                console.log("Country data: ", countryData);
 
-                console.log("Brazil: ", countryData['US']);
+                var coords = [-1.4162690553362722, 53.10106792269397]
 
-                map.on('click', function(e) {
+                httpGetAsync(coords, returnCenter);
 
-                    var coords = [e.lngLat.lng, e.lngLat.lat]
+                function returnCenter(data) {
+            
+                    const info = JSON.parse(data);
 
-                    httpGetAsync(e, returnCenter);
-
-                    function returnCenter(data) {
-                
-                        const info = JSON.parse(data);
-
-                        console.log(info);
-
-                        for(i of info.features) {
-                            if(i.place_type[0] == "country") {
-                                var country = i.place_name;
-                            }
+                    for(i of info.features) {
+                        if(i.place_type[0] == "country") {
+                            var country = i.place_name;
                         }
-
-                        const displayData = countryData[country];
-
-                        new mapboxgl.Popup()
-                        .setLngLat(e.lngLat)
-                        .setHTML("<svg height=300 width = 300 id='pop-up'></svg>")
-                        .addTo(map);
-
-                        console.log(displayData);
-
-                        var x = d3.scaleBand().range([0, 300]).padding(0.4);
-                        var y = d3.scaleLinear().range([300, 0]);
-
-                        x.domain( displayData.map(function(d) { return d.year; }) );
-                        y.domain([0, d3.max(displayData, function(d) { return d.pop; })]);
-
-                        var g = d3.select('#pop-up')
-                                .append('g');
-
-                        const xAxis = g.append("g")
-                        .attr("transform", "translate(0," + 300 + ")")
-                        .call(d3.axisBottom(x))
-                            .selectAll("text")
-                            .style("text-anchor", "end")
-                            .attr("dx", "-.8em")
-                            .attr("dy", ".15em")
-                            .attr("transform", "rotate(-65)");
-
-                        console.log(country);
                     }
 
-                });
+                    const displayData = countryData[country];
+
+                    var height = document.getElementById('pop-up-bar-chart').offsetHeight;
+                    var width = document.getElementById('pop-up-bar-chart').offsetWidth;
+
+                    console.log(displayData);
+
+                    var x = d3.scaleBand().range([0, 300]).padding(0.4);
+                    var y = d3.scaleLinear().range([300, 0]);
+
+                    x.domain( displayData.map(function(d) { return +d.Year; }) );
+                    y.domain([0, d3.max(displayData, function(d) { return +d.pop; })]);
+
+                    var g = d3.select('#pop-up-bar-chart')
+                            .append('svg')
+                            .attr("width", "100%")
+                            .attr("height", "100%")
+                            .append('g');
+
+                    const xAxis = g.append("g")
+                    .attr("transform", "translate(10," + (height -20) + ")")
+                    .call(d3.axisBottom(x))
+                        .selectAll("text")
+                        .style("text-anchor", "end")
+                        .attr("dx", "-.8em")
+                        .attr("dy", ".15em")
+                        .attr("transform", "rotate(-65)");
+
+                }
 
             });
 
