@@ -2,10 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Lab 3 Dashboard <Map></Map></title>
-        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-        <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
-        <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+        <title>Lab 4</title>
+
         <script src='https://d3js.org/d3.v7.min.js'></script>
 
         <style>
@@ -17,37 +15,7 @@
     <body>
         <div id="map"></div>
 
-        <script>
-
-            var currentCountry = "Argentina";
-
-
-            mapboxgl.accessToken = 'pk.eyJ1IjoiZWxsaW90dzY1IiwiYSI6ImNrbGk0amV4MTA5bHUycW5tN2JzM3J0bTIifQ.OGT4ltSNZ7vyd_yEUg8afQ';
-            const map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: [-3, 54],
-            zoom: 1
-            });
-
-
-            // Function to map real world coordinates to their position on the map
-            function project(data) {
-                return map.project(new mapboxgl.LngLat(data[0], data[1]));
-            }
-
-            // Set the size and position of the svg on top of the map
-            var container = map.getCanvasContainer();
-            var svg = d3
-            .select(container)
-            .append("svg")
-            .attr("width", "100%")
-            .attr("height", "100%")
-            .style("position", "absolute")
-            .style("z-index", 2); // Ensure svg is on top of the map so it is visible       
-
-
-
+        <script> 
 
             var link = "https://api.mapbox.com/geocoding/v5/mapbox.places/United%20Kingdom.json?access_token=pk.eyJ1IjoiZWxsaW90dzY1IiwiYSI6ImNrbGk0amV4MTA5bHUycW5tN2JzM3J0bTIifQ.OGT4ltSNZ7vyd_yEUg8afQ"
 
@@ -88,20 +56,6 @@
 
                 console.log(country);
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             d3.csv('bp-stats-review-2021-consolidated-dataset-panel-format.csv').then(function(data) {
 
