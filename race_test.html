@@ -212,6 +212,8 @@
         .sort((a,b) => b.Value - a.Value)
         .slice(0,top_n);
 
+      console.log("year slice: ", yearSlice);
+
       yearSlice.forEach((d,i) => d.rank = i);
 
       x.domain([0, d3.max(yearSlice, d => d.Value)]); 
