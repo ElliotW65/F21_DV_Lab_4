@@ -73,7 +73,7 @@
             var g = svg.append("g")
                         .attr('transform', 'translate(' + 600/2 +  ',' + 600/2 +')');
 
-            d3.csv('iea data.csv').then(function(data) {
+            d3.csv('bp data.csv').then(function(data) {
 
                 console.log(data);
 
@@ -101,11 +101,11 @@
 
                 var data = groupByCountry(data);
 
-                var displayData = data["United Kingdom"];
+                var displayData = data["Algeria"];
 
                 console.log(displayData);
 
-                var year = 1971;
+                var year = 1965;
 
                 var top_n = 12;
 
@@ -120,8 +120,6 @@
                 yearSlice = displayData.filter(d => d.Year == year && !isNaN(d.Value))
                         .sort((a,b) => b.Value - a.Value)
                         .slice(0,top_n);
-
-                console.log(yearSlice);
 
                 var yearText = g.append("text")
                         .classed("pie-year", true)
@@ -157,7 +155,7 @@
                     var enterPath = path.enter().append('g').classed("arcG", true).append("path")
                         .transition()
                         .duration(500)
-                        .attr("fill", function(d, i) { console.log(i); return pieColor(i); })
+                        .attr("fill", function(d, i) { return pieColor(i); })
                         .attr("d", arc)
                         .attrTween("d", function (d) {
                             var i = d3.interpolate(d.endAngle, d.startAngle);
