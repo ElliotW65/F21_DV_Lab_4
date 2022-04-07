@@ -119,6 +119,9 @@
 
                 console.log(yearSlice);
 
+                var yearText = g.append("text")
+                        .attr("text-anchor", "middle")
+                        .text(year);
 
 
 
@@ -140,6 +143,8 @@
 
                     var path = g.selectAll("path")
                     .data(pie(data))
+
+                    yearText.text(year);
 
                     console.log(pie(data));
 
@@ -170,8 +175,6 @@
                         };
                     }
                 };
-
-                updatePie(yearSlice)
 
                 let animatPie = d3.interval(function() {
 
