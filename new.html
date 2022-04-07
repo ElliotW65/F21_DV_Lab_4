@@ -12,6 +12,10 @@
             #pop-up {width: 50%; height: 50%; position: absolute;}
             #pop-up-bar-chart {width: 90%; height: 90%; margin: auto;}
             #arcG {position: absolute; top: 10%; left: 25%;}
+            .pie-year { font-family: Open Sans, sans-serif;
+                        font-size: 30px;
+                        font-weight: 700;
+                        opacity: 0.5;}
 
         </style>
 
@@ -120,7 +124,9 @@
                 console.log(yearSlice);
 
                 var yearText = g.append("text")
+                        .classed("pie-year", true)
                         .attr("text-anchor", "middle")
+                        .attr('transform', 'translate(' + 0 +  ',' + 10 +')')
                         .text(year);
 
 
