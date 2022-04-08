@@ -193,8 +193,9 @@
             var circle = g.selectAll("circle")
                 .data(nodes)
                 .enter().append("circle")
-                .attr("class", function(d) {
-                    console.log("depth: ", d.depth);
+                .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+/*                 .attr("class", function(d) {
+                    console.log("depth: ", d);
                     if(d.depth == 1) {
                         return "node";
                     }
@@ -205,7 +206,7 @@
                     else if(d.depth == 3) {
                         console.log("depth2: ", d.depth);
                         return "node node--leaf";
-                    }})
+                    }}) */
                 .style("fill", function(d) { 
                     
                     if(d.children) {
@@ -216,8 +217,6 @@
                     }
                 })
                 .on("click", function(d) {
-                    console.log("zoom d: ", zoomTarget !== d.target.__data__)
-                    console.log("zoom target: ", zoomTarget)
                     if (zoomTarget !== d.target.__data__) {
                         console.log("In true")
                         zoom(d)
@@ -230,15 +229,33 @@
                 .data(nodes)
                 .enter().append("text")
                 .attr("class", "label")
-                .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
-                .style("display", function(d) { return d.parent === root ? "inline" : "none"; })
-                .text(function(d) { return d.data.name; });
+                .style("fill-opacity", function(d) { 
+                    
+                    if(d.parent === root) {
+                        return 1;
+                    }
+                    else {
+                        return 0;
+                    }
+                })
+                .style("display", function(d) { 
+                    
+                    if(d.parent === root) {
+                        return "inline";
+                    }
+                    else {
+                        return "none";
+                    }
+                })
+                .text(function(d) { 
+                    return d.data.name; 
+                });
             
             var node = g.selectAll("circle,text");
             
             svg.on("click", function() { zoom(root); });
             
-            zoomTo([root.x, root.y, root.r * 2 + margin]);
+            zoomIn([root.x, root.y, root.r * 2 + margin]);
             
             function zoom(d) {
                 var zoomTarget0 = zoomTarget;
@@ -256,26 +273,41 @@
                 var zoom = d3.transition()
                     .duration(600)
                     .tween("zoom", function(d) {
-                    var i = d3.interpolateZoom(currentView, [zoomTarget.x, zoomTarget.y, zoomTarget.r * 2 + margin]);
-                    return function(t) { console.log("t: ", i(t)); zoomTo(i(t)); };
+                        var i = d3.interpolateZoom(currentView, [zoomTarget.x, zoomTarget.y, zoomTarget.r * 2 + margin]);
+                        return function(t) { zoomIn(i(t)); };
                     });
             
                 zoom.selectAll("text")
-                    .filter(function(d) { 
+                    .filter(function(d) {
+                        if(d.parent === zoomTarget) {
+                            return d.parent === zoomTarget
+                        }
+                        else {
+                            return this.style.display === "inline";
+                        }
                         return d.parent === zoomTarget || this.style.display === "inline"; 
                     })
-                    .style("fill-opacity", function(d) { 
-                        return d.parent === zoomTarget ? 1 : 0; 
+                    .style("fill-opacity", function(d) {
+                        if(d.parent === zoomTarget) {
+                            return 1;
+                        }
+                        else {
+                            return 0;
+                        }
                     })
                     .on("start", function(d) { 
-                        if (d.parent === zoomTarget) this.style.display = "inline";
+                        if(d.parent === zoomTarget) {
+                            this.style.display = "inline"
+                        }
                     })
                     .on("end", function(d) { 
-                        if (d.parent !== zoomTarget) this.style.display = "none";
+                        if (d.parent !== zoomTarget) {
+                            this.style.display = "none";
+                        } 
                     });
                 }
             
-            function zoomTo(v) {
+            function zoomIn(v) {
                 currentView = v;
                 var k = diameter / v[2]; currentView = v;
                 node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
