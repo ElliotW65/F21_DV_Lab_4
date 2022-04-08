@@ -16,8 +16,8 @@
                 position: absolute;
                 margin: 0 auto;		
                 text-align: center;			
-                width: 500px;					
-                height: 600px;					
+                width: 700px;					
+                height: 800px;					
                 padding: 2px;
                 color: black;	
                 background: white;	
@@ -82,8 +82,8 @@
             const map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11',
-            center: [-3, 54],
-            zoom: 1
+            center: [0, 25],
+            zoom: 2.5
             });
 
 
@@ -186,8 +186,6 @@
 
                         var displayDataYearly = groupByYear(displayData);
 
-                        console.log(displayDataYearly);
-
                         popupBuilder(displayData, displayDataYearly, country)
 
                         
@@ -217,18 +215,22 @@
                 var svg = d3.select("div.pop-up").append("svg")
                         .classed("pie-container", true)
                         .attr("width", popupWidth-10)
-                        .attr("height", (popupHeight/2) - 60);
+                        .attr("height", (popupHeight/2) - 120);
 
                 var g = svg.append("g")
-                    .attr('transform', 'translate(' + (popupWidth-10)/2 +  ',' + ((popupHeight/2) - 60)/2 +')');
+                    .attr('transform', 'translate(' + (popupWidth-10)/2 +  ',' + ((popupHeight/2) - 120)/2 +')');
+
+                d3.select("div.pop-up").append("h2")
+                    .classed("pie-header", true)
+                    .text("Break Down Of Energy Usage In 2020 In " + country);
 
                 var circleSVG = d3.select("div.pop-up").append("svg")
                     .classed("circle-container", true)
                     .attr("width", popupWidth-10)
-                    .attr("height", (popupHeight/2) - 10);
+                    .attr("height", (popupHeight/2) + 18);
 
                 var circleG = circleSVG.append("g")
-                    .attr('transform', 'translate(' + (popupWidth-10)/2 +  ',' + ((popupHeight/2) - 10)/2 +')');
+                    .attr('transform', 'translate(' + (popupWidth-10)/2 +  ',' + ((popupHeight/2) + 18)/2 +')');
 
                 var year = 1965;
 
@@ -251,8 +253,6 @@
                         .attr("text-anchor", "middle")
                         .attr('transform', 'translate(' + 0 +  ',' + 10 +')')
                         .text(year);
-
-                console.log(yearSlice);
 
 
 
@@ -456,7 +456,6 @@
                 var renTotal = 0;
 
                 for(i of data) {
-                    console.log("i: ", i);
                     if(nonRenewables.includes(i.Category)) {
                         for(o of hierarchy.children[0].children[0].children) {
                             if(o.name == i.Category) {
@@ -488,8 +487,6 @@
                 hierarchy.value = fossilTotal + otherTotal + renTotal;
 
                 var data = hierarchy;
-
-                console.log("Ordered data: ", data);
             
                 var root = d3.hierarchy(data)
                     .sum(function(d) { 
@@ -507,7 +504,6 @@
                     .data(nodes)
                     .enter().append("circle")
                     .attr("class", function(d) {
-                        console.log("depth: ", d);
                         if(d.parent) {
                             if(d.children) {
                                 return "circle";
@@ -529,8 +525,6 @@
                     })
                     .on("click", function(d) {
                         if (zoomTarget !== d.target.__data__) {
-                            console.log("In true")
-                            console.log("d to zoom: ", d)
                             zoom(d)
                             d.stopPropagation();                    
                         }
@@ -570,18 +564,13 @@
                 zoomIn([root.x, root.y, root.r * 2 + margin]);
                 
                 function zoom(d) {
-                    console.log("in zoom function: ", d);
                     var zoomTarget0 = zoomTarget;
-                    console.log("Zoom zoomTarget: ", d);
                     if(d.depth == 0) {
                         zoomTarget = d
                     }
                     else if(d.target.__data__) {
                         zoomTarget = d.target.__data__;
                     }
-                    
-
-                    console.log("Zoom target: ", zoomTarget);
                 
                     var zoom = d3.transition()
                         .duration(600)
@@ -589,12 +578,9 @@
                             var i = d3.interpolateZoom(currentView, [zoomTarget.x, zoomTarget.y, zoomTarget.r * 2 + margin]);
                             return function(t) { zoomIn(i(t)); };
                         });
-
-                    console.log("Zoom variable: ", zoom.selectAll("text"));
                 
                     zoom.selectAll("text.label")
                         .filter(function(d) {
-                            console.log("d: ", d);
                             if(d.parent === zoomTarget) {
                                 return d.parent === zoomTarget
                             }
