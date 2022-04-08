@@ -185,7 +185,7 @@
 
                 var header = d3.select("div.pop-up").append("h2")
                         .classed("pie-header", true)
-                        .text("Electricity Production By Type Since 1965: " + country);
+                        .text("Electricity Production By Type Since 1965 (TWh): " + country);
 
                 var svg = d3.select("div.pop-up").append("svg")
                         .classed("pie-container", true)
@@ -267,11 +267,12 @@
                         }
                         });
 
+
                     var legendG = svg.selectAll(".legend") // note appending it to mySvg and not svg to make positioning easier
                         .data(pie(data))
                         .enter().append("g")
                         .attr("transform", function(d,i){
-                            return "translate(" + ((popupWidth-10) - 110) + "," + (i * 15 + 20) + ")"; // place each legend on the right and bump each one down 15 pixels
+                            return "translate(" + ((popupWidth-10) - 135) + "," + (i * 15 + 20) + ")"; // place each legend on the right and bump each one down 15 pixels
                         })
                         .attr("class", "legend");
 
@@ -284,12 +285,18 @@
 
                     legendG.append("text") // add the text
                         .text(function(d){
-                            console.log(d);
-                            return d.data.Category;
+                            return d.data.Category + ": " + d.data.Value;
                         })
                         .style("font-size", 12)
                         .attr("y", 10)
-                        .attr("x", 11);
+                        .attr("x", 11)
+                        .classed("legend-values", true);      
+                        
+                    legendG.selectAll(".legend-values")
+                        .text(function(d){
+                            console.log(d.data.Value);
+                            return d.data.Category + ": " + d.data.Value;
+                        })
 
                     var updatePath = path.attr("d", arc)
                         .transition()
