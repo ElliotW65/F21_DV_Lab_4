@@ -256,13 +256,13 @@
                     }
                 });
 
-                var textG = g.selectAll(".labels")
+                var pieLabel = g.selectAll(".labels")
                     .data(pie(yearSlice))
                     .enter().append("g")
                     .attr("class", "labels");
 
                     // Append text labels to each arc
-                textG.append("text")
+                pieLabel.append("text")
                     .attr("transform", function(d) {
                         return "translate(" + arc.centroid(d) + ")";
                     })
@@ -274,7 +274,7 @@
                     });
 
 
-                var legendG = svg.selectAll(".legend") // note appending it to mySvg and not svg to make positioning easier
+                var legend = svg.selectAll(".legend") // note appending it to mySvg and not svg to make positioning easier
                     .data(pie(yearSlice))
                     .enter().append("g")
                     .attr("transform", function(d,i){
@@ -282,14 +282,14 @@
                     })
                     .attr("class", "legend");
 
-                legendG.append("rect") // make a matching color rect
+                legend.append("rect") // make a matching color rect
                     .attr("width", 10)
                     .attr("height", 10)
                     .attr("fill", function(d, i) {
                         return pieColor(i);
                     });
 
-                legendG.append("text") // add the text
+                legend.append("text") // add the text
                     .text(function(d){
                         return d.data.Category;
                     })
@@ -338,11 +338,11 @@
                         .duration(1000)
                         .attrTween("d", tweenFunction)
 
-                    textG.data(pie(yearSlice))
+                    pieLabel.data(pie(yearSlice))
                         .enter().append("g")
                         .attr("class", "labels");
 
-                    textG.select("text")
+                    pieLabel.select("text")
                         .transition()
                         .duration(1000)
                         .attr("transform", function(d) {
@@ -356,7 +356,7 @@
                         });
 
 
-/*                     textG.append("text")
+/*                     pieLabel.append("text")
 
                         .attr("dy", ".35em")
                         .style("text-anchor", "middle")
