@@ -62,8 +62,8 @@
         
         d3.csv("renwable power split bp.csv").then(function(data) {
 
-            console.log(data);
-
+            // For loop to create a key value pair in the monthGroup object
+            // for each month in the data where the value is an empty array.
             function groupByCountry(data) {
                 const newGroups = data.reduce(function(groups, item) {
                 const group = (groups[item.Country] || []);
