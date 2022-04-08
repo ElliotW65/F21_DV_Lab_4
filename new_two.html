@@ -18,6 +18,7 @@
                         opacity: 0.5;}
 
         </style>
+    </head>
 
     <body>
         <div id="pop-up">
@@ -186,34 +187,25 @@
 
                 var data = hierarchy;
 
-                pack = data => d3.pack()
-                    .size([width, height])
-                    .padding(3)
-/*                 (d3.hierarchy(data)
-                    .sum(function(d) {
-                        console.log("d: ", d);
-                        console.log("d value: ", d.value);
-                        return d.value;
-                    })
-                    //.sort((a, b) => b.value - a.value)
-                    .sort(function(a,b) {
-                        var sum = b.value - a.value
-                        if(sum < 0) {
-                            return sum*-1
-                        }
-                        else {
-                            return sum;
-                        }
-                        //return b.value - a.value
-                    })) */;
-
-                const root = pack(data);
-                let focus = root;
-                let view;
-
                 var width = 932
 
                 var height = width
+
+                var margin = 20;
+
+                var pack = d3.pack()
+                    .size([width - margin, width - margin])
+                    .padding(2);
+
+                var root = d3.hierarchy(root)
+                    .sum(function(d) { return d.size; })
+                    .sort(function(a, b) { return b.value - a.value; });
+
+                var focus = root,
+                    nodes = pack(root).descendants(),
+                    view;
+
+
 
                 var color = d3.scaleLinear()
                     .domain([0, 5])
@@ -296,4 +288,5 @@
 
         </script>
 
-    </head>
+    </body>
+</html>
