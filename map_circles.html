@@ -554,7 +554,7 @@
                         }
                     })
                     .text(function(d) { 
-                        return d.data.name; 
+                        return d.data.name +": " + (Math.round((d.data.value*100)/100)/1000); 
                     });
                 
                 var node = newG.selectAll("circle,text");
