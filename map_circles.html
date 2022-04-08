@@ -106,7 +106,7 @@
 
             // Function to retrieve the information regarding a countyry from
             // the mapbox geocoding API based on its coordinates from the map
-            function httpGetAsync(country, callback) {
+            function httpGet(country, callback) {
                 var URL = urlBuilder(country);
                 var xmlHttp = new XMLHttpRequest();
                 xmlHttp.onreadystatechange = function() { 
@@ -157,11 +157,11 @@
 
                     var coords = [e.lngLat.lng, e.lngLat.lat]
 
-                    httpGetAsync(e, returnCenter);
+                    httpGet(e, createDisplay);
 
                     // Callback funciton to process the data once the response is received from
                     // the geocoding API.
-                    function returnCenter(data) {
+                    function createDisplay(data) {
                 
                         const info = JSON.parse(data);
 
