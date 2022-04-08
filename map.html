@@ -11,9 +11,10 @@
         <style>
             body { margin: 0; padding: 0; }
             #map { position: absolute; top: 0; bottom: 0; height: 100%; width: 100%; }
-            div.bar-container {position: relative; margin: 0 auto;}
+            div.bar-container {position: absolute; margin: 0 auto;}
             div.pop-up {	
-                position: absolute;			
+                position: absolute;
+                margin: 0 auto;		
                 text-align: center;			
                 width: 500px;					
                 height: 300px;					
@@ -24,52 +25,22 @@
                 border-radius: 8px;					
                 font-family: 'Roboto', sans-serif;
             }
-            text{
-                font-size: 16px;
-                font-family: Open Sans, sans-serif;
+
+            h2.pie-header {
+                text-align: left;
+                padding-left: 2%;
+
             }
-            text.title{
-                font-size: 24px;
-                font-weight: 500;
-            }
-            text.subTitle{
-                font-weight: 500;
-                fill: #777777;
-            }
-            text.caption{
-                font-weight: 400;
-                font-size: 14px;
-                fill: #777777;
-            }
-            text.label{
-                font-weight: 600;
-            }
-            
-            text.valueLabel{
-            font-weight: 300;
-            }
-            
-            text.yearText{
-                font-size: 64px;
-                font-weight: 700;
-                opacity: 0.25;
-            }
-            .tick text {
-                fill: #777777;
-            }
-            .xAxis .tick:nth-child(2) text {
-                text-anchor: start;
-            }
-            .tick line {
-                shape-rendering: CrispEdges;
-                stroke: #dddddd;
-            }
-            .tick line.origin{
-                stroke: #aaaaaa;
-            }
-            path.domain{
-                display: none;
-            }
+
+            .pie-year { font-family: Open Sans, sans-serif;
+                        font-size: 30px;
+                        font-weight: 400;
+                        opacity: 0.5;}
+
+            .pie-header { font-family: Open Sans, sans-serif;
+                        font-size: 15px;
+                        font-weight: 40000;
+                        opacity: 0.75;}
 
         </style>
 
@@ -93,17 +64,7 @@
             // Function to map real world coordinates to their position on the map
             function project(data) {
                 return map.project(new mapboxgl.LngLat(data[0], data[1]));
-            }
-
-            // Set the size and position of the svg on top of the map
-            var container = map.getCanvasContainer();
-            var svg = d3
-            .select(container)
-            .append("svg")
-            .attr("width", "100%")
-            .attr("height", "100%")
-            .style("position", "absolute")
-            .style("z-index", 2); // Ensure svg is on top of the map so it is visible       
+            }  
 
 
 
@@ -147,23 +108,7 @@
             }
 
 
-
-            var popup = d3.select("body").append("div")	
-            .attr("class", "pop-up")				
-            .style("opacity", 0);
-
-
-
-
-
-
-
-
-
-
-
-
-            d3.csv('iea data.csv').then(function(data) {
+            d3.csv('bp data.csv').then(function(data) {
 
                 function groupByCountry(data) {
                     const newGroups = data.reduce(function(groups, item) {
@@ -213,33 +158,11 @@
                             .setHTML("<div class='pop-up'</div>")
                             .addTo(map);
 
+                        popupBuilder(displayData, country)
 
- /*                        popup.transition()		
-                            .duration(200)		
-                            .style("opacity", 1);		
-                        popup.html("")	
-                            .style("left", e.point.x + "px")		
-                            .style("top", e.point.y + "px"); */
 
-                        popupBuilder(displayData)
 
-                        var x = d3.scaleBand().range([0, 300]).padding(0.4);
-                        var y = d3.scaleLinear().range([300, 0]);
 
-                        x.domain( displayData.map(function(d) { return d.year; }) );
-                        y.domain([0, d3.max(displayData, function(d) { return d.pop; })]);
-
-                        var g = d3.select('#pop-up')
-                                .append('g');
-
-                        const xAxis = g.append("g")
-                        .attr("transform", "translate(0," + 300 + ")")
-                        .call(d3.axisBottom(x))
-                            .selectAll("text")
-                            .style("text-anchor", "end")
-                            .attr("dx", "-.8em")
-                            .attr("dy", ".15em")
-                            .attr("transform", "rotate(-65)");
                     }
 
                 });
@@ -247,7 +170,7 @@
             });
 
 
-            function popupBuilder(data) {
+            function popupBuilder(data, country) {
 
                 var parentPopUp = document.getElementsByClassName("pop-up")[0];
 
@@ -255,20 +178,119 @@
 
                 var popupHeight = parentPopUp.offsetHeight;
 
-                console.log(parentPopUp)
-
-                var barContainer = d3.select("div.pop-up").append("div")
+/*                 var barContainer = d3.select("div.pop-up").append("div")
                         .classed("bar-container", true)
-                        .attr("width", popupWidth-10)
-                        .attr("height", popupHeight/2);
+                        .attr("width", popupWidth)
+                        .attr("height", popupHeight); */
 
-                var barSVG = d3.select("div.bar-container").append("svg")
-                        .classed("barSVG", true)
-                        .attr("width", popupWidth-10)
-                        .attr("height", popupHeight/2-10);
+                var header = d3.select("div.pop-up").append("h2")
+                        .classed("pie-header", true)
+                        .text("Electricity Production By Type Since 1965: " + country);
 
-                barRace(data, barSVG);
+                var svg = d3.select("div.pop-up").append("svg")
+                        .classed("pie-container", true)
+                        .attr("width", popupWidth-10)
+                        .attr("height", popupHeight - 60);
+
+                var g = svg.append("g")
+                    .attr('transform', 'translate(' + (popupWidth-10)/2 +  ',' + (popupHeight - 60)/2 +')');
+
+                var year = 1965;
+
+                var top_n = 12;
+
+                data.forEach(d => {
+                    d.Value = +d.Value,
+                    d.lastValue = +d.lastValue,
+                    d.Value = isNaN(d.Value) ? 0 : d.Value,
+                    d.Year = +d.Year,
+                    d.colour = d3.hsl(Math.random()*360,0.75,0.75)
+                });
+
+                yearSlice = data.filter(d => d.Year == year && !isNaN(d.Value))
+                        .sort((a,b) => b.Value - a.Value)
+                        .slice(0,top_n);
+
+                var yearText = g.append("text")
+                        .classed("pie-year", true)
+                        .attr("text-anchor", "middle")
+                        .attr('transform', 'translate(' + 0 +  ',' + 10 +')')
+                        .text(year);
+
+
+
+                // Set colour scheme of pie chart
+                var pieColor = d3.scaleOrdinal().range(d3.schemeSet3);
+
+                var radius = Math.min(300, 300/ 2);
+
+
+
+                let animatPie = d3.interval(function() {
+
+                    yearSlice = data.filter(d => d.Year == year && !isNaN(d.Value))
+                        .sort((a,b) => b.Value - a.Value)
+                        .slice(0,top_n);
+
+                    updatePie(yearSlice);
+
+                    if(year == 2020) {animatPie.stop()}
+
+                    year += 1;
+                }, 1000);
+
+                                // Function to update the pie chart
+                function updatePie(data) {
+
+                    var pie = d3.pie().value(function(d) {
+                            return d.Value; 
+                        });
+
+                    var arc = d3.arc()
+                        .innerRadius(radius - 100)
+                        .outerRadius(radius - 50);
+
+                    var path = g.selectAll("path")
+                    .data(pie(data))
+
+                    yearText.text(year);
+
+                    var enterPath = path.enter().append('g').classed("arcG", true).append("path")
+                        .transition()
+                        .duration(500)
+                        .attr("fill", function(d, i) { return pieColor(i); })
+                        .attr("d", arc)
+                        .attrTween("d", function (d) {
+                            var i = d3.interpolate(d.endAngle, d.startAngle);
+                            return function (t) {
+                            d.startAngle = i(t);
+                            return arc(d);
+                        }
+                        });
+
+                    var updatePath = path.attr("d", arc)
+                        .transition()
+                        .duration(1000)
+                        .attrTween("d", tweenFunction)
+
+                    // Function to smoothly update the segments of the pie chart when new data is used 
+                    function tweenFunction(newAngle) {
+                        var inter = d3.interpolate(this.currentAngle, newAngle);
+                        this.currentAngle = inter(0);
+                        return function(t) {
+                            return arc(inter(t)); 
+                        };
+                    }
+                };
             }
+
+
+
+
+
+
+
+
 
     
 
