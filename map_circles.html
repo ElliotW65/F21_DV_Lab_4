@@ -234,6 +234,7 @@
 
                 var n = 12;
 
+                // Convert the numeric data values stored as string to number
                 data.forEach(d => {
                     d.Value = +d.Value,
                     d.lastValue = +d.lastValue,
@@ -242,10 +243,12 @@
                     d.colour = d3.hsl(Math.random()*360,0.75,0.75)
                 });
 
-                yearSlice = data.filter(d => d.Year == year && !isNaN(d.Value))
+                // Get the cut of data specified by year variable (initially 1965)
+                yearData = data.filter(d => d.Year == year && !isNaN(d.Value))
                         .sort((a,b) => b.Value - a.Value)
                         .slice(0,n);
 
+                // Add the year to the center of the pie
                 var yearText = g.append("text")
                         .classed("pie-year", true)
                         .attr("text-anchor", "middle")
@@ -257,8 +260,10 @@
                 // Set colour scheme of pie chart
                 var pieColor = d3.scaleOrdinal().range(d3.schemeSet3);
 
+                // Set radius of pie chart
                 var radius = Math.min(300, 300/ 2);
 
+                // Following code to create the initial pie chart based on values from 1965
                 var pie = d3.pie().value(function(d) {
                             return d.Value; 
                         });
@@ -268,7 +273,7 @@
                     .outerRadius(radius - 50);
 
                 var path = g.selectAll("path")
-                .data(pie(yearSlice))
+                .data(pie(yearData))
 
                 yearText.text(year);
 
@@ -284,13 +289,13 @@
                         return arc(d);
                     }
                 });
-
+                
+                // Add labels to each pie segment
                 var pieLabel = g.selectAll(".labels")
-                    .data(pie(yearSlice))
+                    .data(pie(yearData))
                     .enter().append("g")
                     .attr("class", "labels");
 
-                    // Append text labels to each arc
                 pieLabel.append("text")
                     .attr("transform", function(d) {
                         return "translate(" + arc.centroid(d) + ")";
@@ -304,7 +309,7 @@
 
 
                 var legend = svg.selectAll(".legend") // note appending it to mySvg and not svg to make positioning easier
-                    .data(pie(yearSlice))
+                    .data(pie(yearData))
                     .enter().append("g")
                     .attr("transform", function(d,i){
                         return "translate(" + ((popupWidth-10) - 125) + "," + (i * 15 + 20) + ")"; // place each legend on the right and bump each one down 15 pixels
@@ -330,11 +335,11 @@
 
                 let animatPie = d3.interval(function() {                    
 
-                    yearSlice = data.filter(d => d.Year == year && !isNaN(d.Value))
+                    yearData = data.filter(d => d.Year == year && !isNaN(d.Value))
                         .sort((a,b) => b.Value - a.Value)
                         .slice(0,n);
 
-                    updatePie(yearSlice);
+                    updatePie(yearData);
 
                     if(year == 2020) {animatPie.stop()}
 
@@ -367,7 +372,7 @@
                         .duration(1000)
                         .attrTween("d", tweenFunction)
 
-                    pieLabel.data(pie(yearSlice))
+                    pieLabel.data(pie(yearData))
                         .enter().append("g")
                         .attr("class", "labels");
 
