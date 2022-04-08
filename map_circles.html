@@ -184,7 +184,11 @@
                             .setHTML("<div class='pop-up'</div>")
                             .addTo(map);
 
-                        popupBuilder(displayData, country)
+                        var displayDataYearly = groupByYear(displayData);
+
+                        console.log(displayDataYearly);
+
+                        popupBuilder(displayData, displayDataYearly, country)
 
                         
 
@@ -198,7 +202,7 @@
             });
 
 
-            function popupBuilder(data, country) {
+            function popupBuilder(data, yearlyData, country) {
 
                 var parentPopUp = document.getElementsByClassName("pop-up")[0];
 
@@ -391,12 +395,11 @@
                             return arc(inter(t)); 
                         };
                 }
-
-                circlePackBuilder(circleSVG, circleG, data);
+                circlePackBuilder(circleSVG, circleG, yearlyData);
             }
 
             function circlePackBuilder(newsvg, newG, data) {
-
+                
                 var margin = 20;
                 var diameter = +newsvg.attr("width")
 
@@ -407,6 +410,16 @@
                 var pack = d3.pack()
                     .size([diameter - margin, diameter - margin])
                     .padding(2);
+                
+                var data = data["2020"];
+
+                data.forEach(d => {
+                    d.Value = +d.Value,
+                    d.PJ = +d.PJ,
+                    d.Value = isNaN(d.Value) ? 0 : d.Value,
+                    d.Year = +d.Year,
+                    d.colour = d3.hsl(Math.random()*360,0.75,0.75)
+                })
 
                 var nonRenewables = ["coal","gas","oil"]
                 var renewables = ["hydro","biogeo","biofuels","solar","wind"]
@@ -443,6 +456,7 @@
                 var renTotal = 0;
 
                 for(i of data) {
+                    console.log("i: ", i);
                     if(nonRenewables.includes(i.Category)) {
                         for(o of hierarchy.children[0].children[0].children) {
                             if(o.name == i.Category) {
@@ -475,7 +489,7 @@
 
                 var data = hierarchy;
 
-                console.log(data);
+                console.log("Ordered data: ", data);
             
                 var root = d3.hierarchy(data)
                     .sum(function(d) { 
