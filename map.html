@@ -108,7 +108,7 @@
             }
 
 
-            d3.csv('bp data.csv').then(function(data) {
+            d3.csv('final data.csv').then(function(data) {
 
                 function groupByCountry(data) {
                     const newGroups = data.reduce(function(groups, item) {
@@ -185,7 +185,7 @@
 
                 var header = d3.select("div.pop-up").append("h2")
                         .classed("pie-header", true)
-                        .text("Electricity Production By Type Since 1965 (TWh): " + country);
+                        .text("Electricity Consumption By Type Since 1965 (PJ): " + country);
 
                 var svg = d3.select("div.pop-up").append("svg")
                         .classed("pie-container", true)
@@ -272,7 +272,7 @@
                         .data(pie(data))
                         .enter().append("g")
                         .attr("transform", function(d,i){
-                            return "translate(" + ((popupWidth-10) - 135) + "," + (i * 15 + 20) + ")"; // place each legend on the right and bump each one down 15 pixels
+                            return "translate(" + ((popupWidth-10) - 125) + "," + (i * 15 + 20) + ")"; // place each legend on the right and bump each one down 15 pixels
                         })
                         .attr("class", "legend");
 

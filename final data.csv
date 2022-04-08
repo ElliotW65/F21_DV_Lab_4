@@ -40071,7 +40071,7 @@ Algeria,2009,DZA,12,Africa,Northern Africa,1,0,0,0,biofuels,0,0
 Algeria,2010,DZA,12,Africa,Northern Africa,1,0,0,0,biofuels,3.34E-12,3.34E-09
 Algeria,2011,DZA,12,Africa,Northern Africa,1,0,0,0,biofuels,3.62E-12,3.62E-09
 Algeria,2012,DZA,12,Africa,Northern Africa,1,0,0,0,biofuels,4.16E-12,4.16E-09
-Algeria,2013,DZA,12,Africa,Northern Africa,1,0,0,0,biofuels,5E-12,0.000000005
+Algeria,2013,DZA,12,Africa,Northern Africa,1,0,0,0,biofuels,5.00E-12,0.000000005
 Algeria,2014,DZA,12,Africa,Northern Africa,1,0,0,0,biofuels,0,0
 Algeria,2015,DZA,12,Africa,Northern Africa,1,0,0,0,biofuels,0,0
 Algeria,2016,DZA,12,Africa,Northern Africa,1,0,0,0,biofuels,4.74E-11,4.74E-08
@@ -40090,7 +40090,7 @@ Argentina,1972,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
 Argentina,1973,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
 Argentina,1974,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
 Argentina,1975,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,2.11E-12,2.11E-09
-Argentina,1976,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,5E-12,0.000000005
+Argentina,1976,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,5.00E-12,0.000000005
 Argentina,1977,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
 Argentina,1978,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,1.59E-11,1.59E-08
 Argentina,1979,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
@@ -40119,7 +40119,7 @@ Argentina,2001,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
 Argentina,2002,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,4.22E-10,0.000000422
 Argentina,2003,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
 Argentina,2004,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,9.75E-11,9.75E-08
-Argentina,2005,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,1.3E-10,0.00000013
+Argentina,2005,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,1.30E-10,0.00000013
 Argentina,2006,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
 Argentina,2007,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
 Argentina,2008,ARG,32,S. & Cent. America,South America,0,0,0,0,biofuels,6.46E-10,0.000000646
@@ -40159,7 +40159,7 @@ Australia,1985,AUS,36,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 Australia,1986,AUS,36,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.02E-10,0.000000102
 Australia,1987,AUS,36,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 Australia,1988,AUS,36,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
-Australia,1989,AUS,36,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.1E-10,0.00000021
+Australia,1989,AUS,36,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.10E-10,0.00000021
 Australia,1990,AUS,36,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 Australia,1991,AUS,36,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,7.13E-11,7.13E-08
 Australia,1992,AUS,36,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
@@ -40315,7 +40315,7 @@ Bangladesh,1999,BGD,50,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Bangladesh,2000,BGD,50,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Bangladesh,2001,BGD,50,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Bangladesh,2002,BGD,50,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
-Bangladesh,2003,BGD,50,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,4E-13,4E-10
+Bangladesh,2003,BGD,50,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,4.00E-13,4.00E-10
 Bangladesh,2004,BGD,50,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,6.72E-13,6.72E-10
 Bangladesh,2005,BGD,50,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Bangladesh,2006,BGD,50,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
@@ -40353,9 +40353,9 @@ Belarus,2001,BLR,112,CIS,CIS,0,0,0,1,biofuels,0,0
 Belarus,2002,BLR,112,CIS,CIS,0,0,0,1,biofuels,0,0
 Belarus,2003,BLR,112,CIS,CIS,0,0,0,1,biofuels,0,0
 Belarus,2004,BLR,112,CIS,CIS,0,0,0,1,biofuels,0,0
-Belarus,2005,BLR,112,CIS,CIS,0,0,0,1,biofuels,4E-13,4E-10
+Belarus,2005,BLR,112,CIS,CIS,0,0,0,1,biofuels,4.00E-13,4.00E-10
 Belarus,2006,BLR,112,CIS,CIS,0,0,0,1,biofuels,0,0
-Belarus,2007,BLR,112,CIS,CIS,0,0,0,1,biofuels,8.1E-13,8.1E-10
+Belarus,2007,BLR,112,CIS,CIS,0,0,0,1,biofuels,8.10E-13,8.10E-10
 Belarus,2008,BLR,112,CIS,CIS,0,0,0,1,biofuels,0.000296,0.296
 Belarus,2009,BLR,112,CIS,CIS,0,0,0,1,biofuels,0.000851,0.851
 Belarus,2010,BLR,112,CIS,CIS,0,0,0,1,biofuels,0.001406,1.406
@@ -40383,7 +40383,7 @@ Belgium,1975,BEL,56,Europe,Europe,0,1,1,0,biofuels,0,0
 Belgium,1976,BEL,56,Europe,Europe,0,1,1,0,biofuels,0,0
 Belgium,1977,BEL,56,Europe,Europe,0,1,1,0,biofuels,0,0
 Belgium,1978,BEL,56,Europe,Europe,0,1,1,0,biofuels,7.08E-12,7.08E-09
-Belgium,1979,BEL,56,Europe,Europe,0,1,1,0,biofuels,4.1E-12,4.1E-09
+Belgium,1979,BEL,56,Europe,Europe,0,1,1,0,biofuels,4.10E-12,4.10E-09
 Belgium,1980,BEL,56,Europe,Europe,0,1,1,0,biofuels,2.61E-11,2.61E-08
 Belgium,1981,BEL,56,Europe,Europe,0,1,1,0,biofuels,3.93E-11,3.93E-08
 Belgium,1982,BEL,56,Europe,Europe,0,1,1,0,biofuels,1.02E-11,1.02E-08
@@ -40397,7 +40397,7 @@ Belgium,1989,BEL,56,Europe,Europe,0,1,1,0,biofuels,0,0
 Belgium,1990,BEL,56,Europe,Europe,0,1,1,0,biofuels,5.43E-11,5.43E-08
 Belgium,1991,BEL,56,Europe,Europe,0,1,1,0,biofuels,0,0
 Belgium,1992,BEL,56,Europe,Europe,0,1,1,0,biofuels,7.58E-11,7.58E-08
-Belgium,1993,BEL,56,Europe,Europe,0,1,1,0,biofuels,2.7E-11,0.000000027
+Belgium,1993,BEL,56,Europe,Europe,0,1,1,0,biofuels,2.70E-11,0.000000027
 Belgium,1994,BEL,56,Europe,Europe,0,1,1,0,biofuels,3.04E-11,3.04E-08
 Belgium,1995,BEL,56,Europe,Europe,0,1,1,0,biofuels,0,0
 Belgium,1996,BEL,56,Europe,Europe,0,1,1,0,biofuels,0,0
@@ -40522,7 +40522,7 @@ Bulgaria,2002,BGR,100,Europe,Europe,0,1,0,0,biofuels,0,0
 Bulgaria,2003,BGR,100,Europe,Europe,0,1,0,0,biofuels,0,0
 Bulgaria,2004,BGR,100,Europe,Europe,0,1,0,0,biofuels,6.66E-14,6.66E-11
 Bulgaria,2005,BGR,100,Europe,Europe,0,1,0,0,biofuels,1.81E-13,1.81E-10
-Bulgaria,2006,BGR,100,Europe,Europe,0,1,0,0,biofuels,3.1E-12,3.1E-09
+Bulgaria,2006,BGR,100,Europe,Europe,0,1,0,0,biofuels,3.10E-12,3.10E-09
 Bulgaria,2007,BGR,100,Europe,Europe,0,1,0,0,biofuels,2.54E-12,2.54E-09
 Bulgaria,2008,BGR,100,Europe,Europe,0,1,0,0,biofuels,0.000074,0.074
 Bulgaria,2009,BGR,100,Europe,Europe,0,1,0,0,biofuels,0.000222021,0.222021
@@ -40562,7 +40562,7 @@ Canada,1986,CAN,124,North America,North America,0,0,1,0,biofuels,9.15E-10,0.0000
 Canada,1987,CAN,124,North America,North America,0,0,1,0,biofuels,0,0
 Canada,1988,CAN,124,North America,North America,0,0,1,0,biofuels,0,0
 Canada,1989,CAN,124,North America,North America,0,0,1,0,biofuels,7.26E-10,0.000000726
-Canada,1990,CAN,124,North America,North America,0,0,1,0,biofuels,2.6E-10,0.00000026
+Canada,1990,CAN,124,North America,North America,0,0,1,0,biofuels,2.60E-10,0.00000026
 Canada,1991,CAN,124,North America,North America,0,0,1,0,biofuels,1.61E-09,0.00000161
 Canada,1992,CAN,124,North America,North America,0,0,1,0,biofuels,0,0
 Canada,1993,CAN,124,North America,North America,0,0,1,0,biofuels,3.26E-10,0.000000326
@@ -40749,7 +40749,7 @@ China Hong Kong SAR,2005,HKG,344,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 China Hong Kong SAR,2006,HKG,344,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 China Hong Kong SAR,2007,HKG,344,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 China Hong Kong SAR,2008,HKG,344,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,4.52E-13,4.52E-10
-China Hong Kong SAR,2009,HKG,344,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,1.3E-13,1.3E-10
+China Hong Kong SAR,2009,HKG,344,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,1.30E-13,1.30E-10
 China Hong Kong SAR,2010,HKG,344,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0.000153659,0.153659
 China Hong Kong SAR,2011,HKG,344,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0.001100106,1.100106
 China Hong Kong SAR,2012,HKG,344,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0.000191664,0.191664
@@ -40780,7 +40780,7 @@ Colombia,1980,COL,170,S. & Cent. America,South America,0,0,1,0,biofuels,5.54E-11
 Colombia,1981,COL,170,S. & Cent. America,South America,0,0,1,0,biofuels,7.74E-11,7.74E-08
 Colombia,1982,COL,170,S. & Cent. America,South America,0,0,1,0,biofuels,0,0
 Colombia,1983,COL,170,S. & Cent. America,South America,0,0,1,0,biofuels,0,0
-Colombia,1984,COL,170,S. & Cent. America,South America,0,0,1,0,biofuels,9.2E-11,0.000000092
+Colombia,1984,COL,170,S. & Cent. America,South America,0,0,1,0,biofuels,9.20E-11,0.000000092
 Colombia,1985,COL,170,S. & Cent. America,South America,0,0,1,0,biofuels,7.44E-11,7.44E-08
 Colombia,1986,COL,170,S. & Cent. America,South America,0,0,1,0,biofuels,0,0
 Colombia,1987,COL,170,S. & Cent. America,South America,0,0,1,0,biofuels,0,0
@@ -40831,7 +40831,7 @@ Croatia,2000,HRV,191,Europe,Europe,0,1,0,0,biofuels,0,0
 Croatia,2001,HRV,191,Europe,Europe,0,1,0,0,biofuels,0,0
 Croatia,2002,HRV,191,Europe,Europe,0,1,0,0,biofuels,0,0
 Croatia,2003,HRV,191,Europe,Europe,0,1,0,0,biofuels,0,0
-Croatia,2004,HRV,191,Europe,Europe,0,1,0,0,biofuels,4E-13,4E-10
+Croatia,2004,HRV,191,Europe,Europe,0,1,0,0,biofuels,4.00E-13,4.00E-10
 Croatia,2005,HRV,191,Europe,Europe,0,1,0,0,biofuels,0,0
 Croatia,2006,HRV,191,Europe,Europe,0,1,0,0,biofuels,4.65E-12,4.65E-09
 Croatia,2007,HRV,191,Europe,Europe,0,1,0,0,biofuels,0.000110811,0.110811
@@ -40987,7 +40987,7 @@ Denmark,1988,DNK,208,Europe,Europe,0,1,1,0,biofuels,7.24E-11,7.24E-08
 Denmark,1989,DNK,208,Europe,Europe,0,1,1,0,biofuels,7.24E-11,7.24E-08
 Denmark,1990,DNK,208,Europe,Europe,0,1,1,0,biofuels,6.31E-11,6.31E-08
 Denmark,1991,DNK,208,Europe,Europe,0,1,1,0,biofuels,0,0
-Denmark,1992,DNK,208,Europe,Europe,0,1,1,0,biofuels,4.1E-10,0.00000041
+Denmark,1992,DNK,208,Europe,Europe,0,1,1,0,biofuels,4.10E-10,0.00000041
 Denmark,1993,DNK,208,Europe,Europe,0,1,1,0,biofuels,7.22E-11,7.22E-08
 Denmark,1994,DNK,208,Europe,Europe,0,1,1,0,biofuels,4.31E-10,0.000000431
 Denmark,1995,DNK,208,Europe,Europe,0,1,1,0,biofuels,0,0
@@ -41116,13 +41116,13 @@ Egypt,2005,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,1.69E-10,0.000000169
 Egypt,2006,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,4.94E-11,4.94E-08
 Egypt,2007,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,1.58E-10,0.000000158
 Egypt,2008,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,0,0
-Egypt,2009,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,1.5E-10,0.00000015
+Egypt,2009,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,1.50E-10,0.00000015
 Egypt,2010,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,0,0
-Egypt,2011,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,3.1E-10,0.00000031
+Egypt,2011,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,3.10E-10,0.00000031
 Egypt,2012,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,3.64E-10,0.000000364
 Egypt,2013,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,4.13E-10,0.000000413
 Egypt,2014,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,6.12E-11,6.12E-08
-Egypt,2015,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,1.2E-10,0.00000012
+Egypt,2015,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,1.20E-10,0.00000012
 Egypt,2016,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,0,0
 Egypt,2017,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,1.91E-10,0.000000191
 Egypt,2018,EGY,818,Africa,Northern Africa,0,0,0,0,biofuels,0,0
@@ -41228,7 +41228,7 @@ France,1969,FRA,250,Europe,Europe,0,1,1,0,biofuels,0,0
 France,1970,FRA,250,Europe,Europe,0,1,1,0,biofuels,0,0
 France,1971,FRA,250,Europe,Europe,0,1,1,0,biofuels,0,0
 France,1972,FRA,250,Europe,Europe,0,1,1,0,biofuels,3.25E-10,0.000000325
-France,1973,FRA,250,Europe,Europe,0,1,1,0,biofuels,1.4E-11,0.000000014
+France,1973,FRA,250,Europe,Europe,0,1,1,0,biofuels,1.40E-11,0.000000014
 France,1974,FRA,250,Europe,Europe,0,1,1,0,biofuels,0,0
 France,1975,FRA,250,Europe,Europe,0,1,1,0,biofuels,0,0
 France,1976,FRA,250,Europe,Europe,0,1,1,0,biofuels,2.12E-10,0.000000212
@@ -41293,9 +41293,9 @@ Germany,1978,DEU,276,Europe,Europe,0,1,1,0,biofuels,0,0
 Germany,1979,DEU,276,Europe,Europe,0,1,1,0,biofuels,1.99E-10,0.000000199
 Germany,1980,DEU,276,Europe,Europe,0,1,1,0,biofuels,7.43E-10,0.000000743
 Germany,1981,DEU,276,Europe,Europe,0,1,1,0,biofuels,0,0
-Germany,1982,DEU,276,Europe,Europe,0,1,1,0,biofuels,4.1E-10,0.00000041
+Germany,1982,DEU,276,Europe,Europe,0,1,1,0,biofuels,4.10E-10,0.00000041
 Germany,1983,DEU,276,Europe,Europe,0,1,1,0,biofuels,0,0
-Germany,1984,DEU,276,Europe,Europe,0,1,1,0,biofuels,4.2E-10,0.00000042
+Germany,1984,DEU,276,Europe,Europe,0,1,1,0,biofuels,4.20E-10,0.00000042
 Germany,1985,DEU,276,Europe,Europe,0,1,1,0,biofuels,0,0
 Germany,1986,DEU,276,Europe,Europe,0,1,1,0,biofuels,3.22E-10,0.000000322
 Germany,1987,DEU,276,Europe,Europe,0,1,1,0,biofuels,3.89E-10,0.000000389
@@ -41418,7 +41418,7 @@ Hungary,1991,HUN,348,Europe,Europe,0,1,1,0,biofuels,0,0
 Hungary,1992,HUN,348,Europe,Europe,0,1,1,0,biofuels,1.02E-11,1.02E-08
 Hungary,1993,HUN,348,Europe,Europe,0,1,1,0,biofuels,1.06E-12,1.06E-09
 Hungary,1994,HUN,348,Europe,Europe,0,1,1,0,biofuels,0,0
-Hungary,1995,HUN,348,Europe,Europe,0,1,1,0,biofuels,1.5E-11,0.000000015
+Hungary,1995,HUN,348,Europe,Europe,0,1,1,0,biofuels,1.50E-11,0.000000015
 Hungary,1996,HUN,348,Europe,Europe,0,1,1,0,biofuels,2.37E-11,2.37E-08
 Hungary,1997,HUN,348,Europe,Europe,0,1,1,0,biofuels,1.94E-11,1.94E-08
 Hungary,1998,HUN,348,Europe,Europe,0,1,1,0,biofuels,2.85E-11,2.85E-08
@@ -41528,7 +41528,7 @@ India,1989,IND,356,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 India,1990,IND,356,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,7.07E-12,7.07E-09
 India,1991,IND,356,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,4.07E-12,4.07E-09
 India,1992,IND,356,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
-India,1993,IND,356,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,6.3E-11,0.000000063
+India,1993,IND,356,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,6.30E-11,0.000000063
 India,1994,IND,356,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,9.82E-11,9.82E-08
 India,1995,IND,356,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 India,1996,IND,356,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
@@ -41587,7 +41587,7 @@ Indonesia,1992,IDN,360,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,3.32E-10,0.000
 Indonesia,1993,IDN,360,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,2.24E-10,0.000000224
 Indonesia,1994,IDN,360,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,8.94E-10,0.000000894
 Indonesia,1995,IDN,360,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
-Indonesia,1996,IDN,360,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,4.4E-10,0.00000044
+Indonesia,1996,IDN,360,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,4.40E-10,0.00000044
 Indonesia,1997,IDN,360,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,3.42E-10,0.000000342
 Indonesia,1998,IDN,360,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Indonesia,1999,IDN,360,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,1.27E-09,0.00000127
@@ -41757,10 +41757,10 @@ Ireland,1994,IRL,372,Europe,Europe,0,1,1,0,biofuels,3.11E-12,3.11E-09
 Ireland,1995,IRL,372,Europe,Europe,0,1,1,0,biofuels,0,0
 Ireland,1996,IRL,372,Europe,Europe,0,1,1,0,biofuels,0,0
 Ireland,1997,IRL,372,Europe,Europe,0,1,1,0,biofuels,2.07E-11,2.07E-08
-Ireland,1998,IRL,372,Europe,Europe,0,1,1,0,biofuels,3.7E-11,0.000000037
+Ireland,1998,IRL,372,Europe,Europe,0,1,1,0,biofuels,3.70E-11,0.000000037
 Ireland,1999,IRL,372,Europe,Europe,0,1,1,0,biofuels,0,0
 Ireland,2000,IRL,372,Europe,Europe,0,1,1,0,biofuels,7.63E-11,7.63E-08
-Ireland,2001,IRL,372,Europe,Europe,0,1,1,0,biofuels,8.4E-11,0.000000084
+Ireland,2001,IRL,372,Europe,Europe,0,1,1,0,biofuels,8.40E-11,0.000000084
 Ireland,2002,IRL,372,Europe,Europe,0,1,1,0,biofuels,9.32E-11,9.32E-08
 Ireland,2003,IRL,372,Europe,Europe,0,1,1,0,biofuels,0,0
 Ireland,2004,IRL,372,Europe,Europe,0,1,1,0,biofuels,0,0
@@ -41907,15 +41907,15 @@ Japan,1976,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 Japan,1977,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 Japan,1978,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.03E-10,0.000000203
 Japan,1979,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
-Japan,1980,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.2E-10,0.00000022
+Japan,1980,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.20E-10,0.00000022
 Japan,1981,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.42E-10,0.000000242
 Japan,1982,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,3.46E-10,0.000000346
 Japan,1983,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.86E-09,0.00000186
 Japan,1984,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,3.16E-09,0.00000316
-Japan,1985,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,3.3E-09,0.0000033
+Japan,1985,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,3.30E-09,0.0000033
 Japan,1986,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,3.07E-09,0.00000307
 Japan,1987,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,4.92E-09,0.00000492
-Japan,1988,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,5.8E-09,0.0000058
+Japan,1988,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,5.80E-09,0.0000058
 Japan,1989,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.56E-09,0.00000256
 Japan,1990,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.09E-09,0.00000209
 Japan,1991,JPN,392,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.43E-09,0.00000143
@@ -41975,7 +41975,7 @@ Kazakhstan,2008,KAZ,398,CIS,CIS,0,0,0,1,biofuels,0,0
 Kazakhstan,2009,KAZ,398,CIS,CIS,0,0,0,1,biofuels,0,0
 Kazakhstan,2010,KAZ,398,CIS,CIS,0,0,0,1,biofuels,0,0
 Kazakhstan,2011,KAZ,398,CIS,CIS,0,0,0,1,biofuels,0,0
-Kazakhstan,2012,KAZ,398,CIS,CIS,0,0,0,1,biofuels,5.2E-13,5.2E-10
+Kazakhstan,2012,KAZ,398,CIS,CIS,0,0,0,1,biofuels,5.20E-13,5.20E-10
 Kazakhstan,2013,KAZ,398,CIS,CIS,0,0,0,1,biofuels,1.39E-12,1.39E-09
 Kazakhstan,2014,KAZ,398,CIS,CIS,0,0,0,1,biofuels,0,0
 Kazakhstan,2015,KAZ,398,CIS,CIS,0,0,0,1,biofuels,0,0
@@ -42059,7 +42059,7 @@ Latvia,2000,LVA,428,Europe,Europe,0,1,1,0,biofuels,0,0
 Latvia,2001,LVA,428,Europe,Europe,0,1,1,0,biofuels,0,0
 Latvia,2002,LVA,428,Europe,Europe,0,1,1,0,biofuels,0,0
 Latvia,2003,LVA,428,Europe,Europe,0,1,1,0,biofuels,1.74E-11,1.74E-08
-Latvia,2004,LVA,428,Europe,Europe,0,1,1,0,biofuels,3.4E-13,3.4E-10
+Latvia,2004,LVA,428,Europe,Europe,0,1,1,0,biofuels,3.40E-13,3.40E-10
 Latvia,2005,LVA,428,Europe,Europe,0,1,1,0,biofuels,0.000111,0.111
 Latvia,2006,LVA,428,Europe,Europe,0,1,1,0,biofuels,0.000127591,0.127591
 Latvia,2007,LVA,428,Europe,Europe,0,1,1,0,biofuels,0.000074,0.074
@@ -42135,7 +42135,7 @@ Luxembourg,1984,LUX,442,Europe,Europe,0,1,1,0,biofuels,6.11E-12,6.11E-09
 Luxembourg,1985,LUX,442,Europe,Europe,0,1,1,0,biofuels,2.73E-12,2.73E-09
 Luxembourg,1986,LUX,442,Europe,Europe,0,1,1,0,biofuels,0,0
 Luxembourg,1987,LUX,442,Europe,Europe,0,1,1,0,biofuels,1.72E-12,1.72E-09
-Luxembourg,1988,LUX,442,Europe,Europe,0,1,1,0,biofuels,5.1E-12,5.1E-09
+Luxembourg,1988,LUX,442,Europe,Europe,0,1,1,0,biofuels,5.10E-12,5.10E-09
 Luxembourg,1989,LUX,442,Europe,Europe,0,1,1,0,biofuels,6.11E-12,6.11E-09
 Luxembourg,1990,LUX,442,Europe,Europe,0,1,1,0,biofuels,6.32E-12,6.32E-09
 Luxembourg,1991,LUX,442,Europe,Europe,0,1,1,0,biofuels,0,0
@@ -42143,15 +42143,15 @@ Luxembourg,1992,LUX,442,Europe,Europe,0,1,1,0,biofuels,1.28E-12,1.28E-09
 Luxembourg,1993,LUX,442,Europe,Europe,0,1,1,0,biofuels,0,0
 Luxembourg,1994,LUX,442,Europe,Europe,0,1,1,0,biofuels,0,0
 Luxembourg,1995,LUX,442,Europe,Europe,0,1,1,0,biofuels,5.82E-12,5.82E-09
-Luxembourg,1996,LUX,442,Europe,Europe,0,1,1,0,biofuels,3.4E-12,3.4E-09
+Luxembourg,1996,LUX,442,Europe,Europe,0,1,1,0,biofuels,3.40E-12,3.40E-09
 Luxembourg,1997,LUX,442,Europe,Europe,0,1,1,0,biofuels,0,0
 Luxembourg,1998,LUX,442,Europe,Europe,0,1,1,0,biofuels,0,0
 Luxembourg,1999,LUX,442,Europe,Europe,0,1,1,0,biofuels,0,0
 Luxembourg,2000,LUX,442,Europe,Europe,0,1,1,0,biofuels,0,0
 Luxembourg,2001,LUX,442,Europe,Europe,0,1,1,0,biofuels,1.86E-11,1.86E-08
-Luxembourg,2002,LUX,442,Europe,Europe,0,1,1,0,biofuels,6.6E-12,6.6E-09
+Luxembourg,2002,LUX,442,Europe,Europe,0,1,1,0,biofuels,6.60E-12,6.60E-09
 Luxembourg,2003,LUX,442,Europe,Europe,0,1,1,0,biofuels,2.27E-11,2.27E-08
-Luxembourg,2004,LUX,442,Europe,Europe,0,1,1,0,biofuels,1.1E-11,0.000000011
+Luxembourg,2004,LUX,442,Europe,Europe,0,1,1,0,biofuels,1.10E-11,0.000000011
 Luxembourg,2005,LUX,442,Europe,Europe,0,1,1,0,biofuels,0,0
 Luxembourg,2006,LUX,442,Europe,Europe,0,1,1,0,biofuels,0,0
 Luxembourg,2007,LUX,442,Europe,Europe,0,1,1,0,biofuels,0.001840975,1.840975
@@ -42203,7 +42203,7 @@ Malaysia,1996,MYS,458,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Malaysia,1997,MYS,458,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Malaysia,1998,MYS,458,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Malaysia,1999,MYS,458,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
-Malaysia,2000,MYS,458,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,2E-10,0.0000002
+Malaysia,2000,MYS,458,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,2.00E-10,0.0000002
 Malaysia,2001,MYS,458,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Malaysia,2002,MYS,458,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,9.77E-11,9.77E-08
 Malaysia,2003,MYS,458,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
@@ -42370,8 +42370,8 @@ Netherlands,1995,NLD,528,Europe,Europe,0,1,1,0,biofuels,0,0
 Netherlands,1996,NLD,528,Europe,Europe,0,1,1,0,biofuels,0,0
 Netherlands,1997,NLD,528,Europe,Europe,0,1,1,0,biofuels,0,0
 Netherlands,1998,NLD,528,Europe,Europe,0,1,1,0,biofuels,0,0
-Netherlands,1999,NLD,528,Europe,Europe,0,1,1,0,biofuels,1.1E-09,0.0000011
-Netherlands,2000,NLD,528,Europe,Europe,0,1,1,0,biofuels,2.8E-10,0.00000028
+Netherlands,1999,NLD,528,Europe,Europe,0,1,1,0,biofuels,1.10E-09,0.0000011
+Netherlands,2000,NLD,528,Europe,Europe,0,1,1,0,biofuels,2.80E-10,0.00000028
 Netherlands,2001,NLD,528,Europe,Europe,0,1,1,0,biofuels,0,0
 Netherlands,2002,NLD,528,Europe,Europe,0,1,1,0,biofuels,8.54E-10,0.000000854
 Netherlands,2003,NLD,528,Europe,Europe,0,1,1,0,biofuels,0,0
@@ -42404,10 +42404,10 @@ New Zealand,1973,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.19E-10,0.0
 New Zealand,1974,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.51E-10,0.000000251
 New Zealand,1975,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 New Zealand,1976,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.95E-10,0.000000295
-New Zealand,1977,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.3E-10,0.00000013
+New Zealand,1977,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.30E-10,0.00000013
 New Zealand,1978,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.28E-10,0.000000128
 New Zealand,1979,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.15E-10,0.000000215
-New Zealand,1980,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.6E-10,0.00000016
+New Zealand,1980,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.60E-10,0.00000016
 New Zealand,1981,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 New Zealand,1982,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,5.39E-11,5.39E-08
 New Zealand,1983,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
@@ -42418,7 +42418,7 @@ New Zealand,1987,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 New Zealand,1988,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 New Zealand,1989,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,5.24E-10,0.000000524
 New Zealand,1990,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
-New Zealand,1991,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,7.4E-10,0.00000074
+New Zealand,1991,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,7.40E-10,0.00000074
 New Zealand,1992,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 New Zealand,1993,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.91E-10,0.000000191
 New Zealand,1994,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
@@ -42430,7 +42430,7 @@ New Zealand,1999,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 New Zealand,2000,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.77E-10,0.000000277
 New Zealand,2001,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.86E-11,1.86E-08
 New Zealand,2002,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
-New Zealand,2003,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,7.3E-10,0.00000073
+New Zealand,2003,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,7.30E-10,0.00000073
 New Zealand,2004,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 New Zealand,2005,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 New Zealand,2006,NZL,554,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.81E-09,0.00000181
@@ -42507,12 +42507,12 @@ Norway,1989,NOR,578,Europe,Europe,0,0,1,0,biofuels,0,0
 Norway,1990,NOR,578,Europe,Europe,0,0,1,0,biofuels,0,0
 Norway,1991,NOR,578,Europe,Europe,0,0,1,0,biofuels,8.18E-11,8.18E-08
 Norway,1992,NOR,578,Europe,Europe,0,0,1,0,biofuels,5.54E-11,5.54E-08
-Norway,1993,NOR,578,Europe,Europe,0,0,1,0,biofuels,1.1E-10,0.00000011
-Norway,1994,NOR,578,Europe,Europe,0,0,1,0,biofuels,7E-11,0.00000007
+Norway,1993,NOR,578,Europe,Europe,0,0,1,0,biofuels,1.10E-10,0.00000011
+Norway,1994,NOR,578,Europe,Europe,0,0,1,0,biofuels,7.00E-11,0.00000007
 Norway,1995,NOR,578,Europe,Europe,0,0,1,0,biofuels,0,0
 Norway,1996,NOR,578,Europe,Europe,0,0,1,0,biofuels,2.17E-11,2.17E-08
 Norway,1997,NOR,578,Europe,Europe,0,0,1,0,biofuels,0,0
-Norway,1998,NOR,578,Europe,Europe,0,0,1,0,biofuels,7E-11,0.00000007
+Norway,1998,NOR,578,Europe,Europe,0,0,1,0,biofuels,7.00E-11,0.00000007
 Norway,1999,NOR,578,Europe,Europe,0,0,1,0,biofuels,5.84E-11,5.84E-08
 Norway,2000,NOR,578,Europe,Europe,0,0,1,0,biofuels,0,0
 Norway,2001,NOR,578,Europe,Europe,0,0,1,0,biofuels,8.03E-11,8.03E-08
@@ -42643,7 +42643,7 @@ Pakistan,2013,PAK,586,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,1.42E-11,1.42E-
 Pakistan,2014,PAK,586,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Pakistan,2015,PAK,586,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Pakistan,2016,PAK,586,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
-Pakistan,2017,PAK,586,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,2.9E-11,0.000000029
+Pakistan,2017,PAK,586,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,2.90E-11,0.000000029
 Pakistan,2018,PAK,586,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Pakistan,2019,PAK,586,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Pakistan,2020,PAK,586,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
@@ -42655,12 +42655,12 @@ Peru,1969,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
 Peru,1970,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
 Peru,1971,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,5.54E-11,5.54E-08
 Peru,1972,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,5.54E-11,5.54E-08
-Peru,1973,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,5.1E-11,0.000000051
+Peru,1973,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,5.10E-11,0.000000051
 Peru,1974,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
 Peru,1975,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
 Peru,1976,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,2.91E-11,2.91E-08
 Peru,1977,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,3.35E-11,3.35E-08
-Peru,1978,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,7.3E-11,0.000000073
+Peru,1978,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,7.30E-11,0.000000073
 Peru,1979,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,0,0
 Peru,1980,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,1.13E-11,1.13E-08
 Peru,1981,PER,604,S. & Cent. America,South America,0,0,0,0,biofuels,2.45E-11,2.45E-08
@@ -42723,7 +42723,7 @@ Philippines,1981,PHL,608,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Philippines,1982,PHL,608,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,4.72E-10,0.000000472
 Philippines,1983,PHL,608,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,1.61E-09,0.00000161
 Philippines,1984,PHL,608,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
-Philippines,1985,PHL,608,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,7.7E-11,0.000000077
+Philippines,1985,PHL,608,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,7.70E-11,0.000000077
 Philippines,1986,PHL,608,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Philippines,1987,PHL,608,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,8.56E-10,0.000000856
 Philippines,1988,PHL,608,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,1.54E-09,0.00000154
@@ -42794,7 +42794,7 @@ Poland,1996,POL,616,Europe,Europe,0,1,1,0,biofuels,0,0
 Poland,1997,POL,616,Europe,Europe,0,1,1,0,biofuels,0,0
 Poland,1998,POL,616,Europe,Europe,0,1,1,0,biofuels,0,0
 Poland,1999,POL,616,Europe,Europe,0,1,1,0,biofuels,2.66E-11,2.66E-08
-Poland,2000,POL,616,Europe,Europe,0,1,1,0,biofuels,6.3E-11,0.000000063
+Poland,2000,POL,616,Europe,Europe,0,1,1,0,biofuels,6.30E-11,0.000000063
 Poland,2001,POL,616,Europe,Europe,0,1,1,0,biofuels,2.38E-11,2.38E-08
 Poland,2002,POL,616,Europe,Europe,0,1,1,0,biofuels,1.14E-10,0.000000114
 Poland,2003,POL,616,Europe,Europe,0,1,1,0,biofuels,0.001179205,1.179205
@@ -42816,17 +42816,17 @@ Poland,2018,POL,616,Europe,Europe,0,1,1,0,biofuels,0.0381144,38.1144
 Poland,2019,POL,616,Europe,Europe,0,1,1,0,biofuels,0.041165283,41.165283
 Poland,2020,POL,616,Europe,Europe,0,1,1,0,biofuels,0.038929508,38.929508
 Portugal,1965,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
-Portugal,1966,PRT,620,Europe,Europe,0,1,1,0,biofuels,9.5E-11,0.000000095
+Portugal,1966,PRT,620,Europe,Europe,0,1,1,0,biofuels,9.50E-11,0.000000095
 Portugal,1967,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
 Portugal,1968,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
 Portugal,1969,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
 Portugal,1970,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
 Portugal,1971,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
 Portugal,1972,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
-Portugal,1973,PRT,620,Europe,Europe,0,1,1,0,biofuels,9.5E-11,0.000000095
+Portugal,1973,PRT,620,Europe,Europe,0,1,1,0,biofuels,9.50E-11,0.000000095
 Portugal,1974,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
 Portugal,1975,PRT,620,Europe,Europe,0,1,1,0,biofuels,4.22E-11,4.22E-08
-Portugal,1976,PRT,620,Europe,Europe,0,1,1,0,biofuels,5.1E-11,0.000000051
+Portugal,1976,PRT,620,Europe,Europe,0,1,1,0,biofuels,5.10E-11,0.000000051
 Portugal,1977,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
 Portugal,1978,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
 Portugal,1979,PRT,620,Europe,Europe,0,1,1,0,biofuels,8.76E-11,8.76E-08
@@ -42834,11 +42834,11 @@ Portugal,1980,PRT,620,Europe,Europe,0,1,1,0,biofuels,7.56E-11,7.56E-08
 Portugal,1981,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
 Portugal,1982,PRT,620,Europe,Europe,0,1,1,0,biofuels,1.04E-10,0.000000104
 Portugal,1983,PRT,620,Europe,Europe,0,1,1,0,biofuels,1.05E-10,0.000000105
-Portugal,1984,PRT,620,Europe,Europe,0,1,1,0,biofuels,3.6E-13,3.6E-10
+Portugal,1984,PRT,620,Europe,Europe,0,1,1,0,biofuels,3.60E-13,3.60E-10
 Portugal,1985,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
 Portugal,1986,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
-Portugal,1987,PRT,620,Europe,Europe,0,1,1,0,biofuels,1.1E-10,0.00000011
-Portugal,1988,PRT,620,Europe,Europe,0,1,1,0,biofuels,2.1E-10,0.00000021
+Portugal,1987,PRT,620,Europe,Europe,0,1,1,0,biofuels,1.10E-10,0.00000011
+Portugal,1988,PRT,620,Europe,Europe,0,1,1,0,biofuels,2.10E-10,0.00000021
 Portugal,1989,PRT,620,Europe,Europe,0,1,1,0,biofuels,4.01E-11,4.01E-08
 Portugal,1990,PRT,620,Europe,Europe,0,1,1,0,biofuels,0,0
 Portugal,1991,PRT,620,Europe,Europe,0,1,1,0,biofuels,5.64E-11,5.64E-08
@@ -43008,7 +43008,7 @@ Russian Federation,2006,RUS,643,CIS,CIS,0,0,0,1,biofuels,0,0
 Russian Federation,2007,RUS,643,CIS,CIS,0,0,0,1,biofuels,5.56E-11,5.56E-08
 Russian Federation,2008,RUS,643,CIS,CIS,0,0,0,1,biofuels,0,0
 Russian Federation,2009,RUS,643,CIS,CIS,0,0,0,1,biofuels,1.29E-10,0.000000129
-Russian Federation,2010,RUS,643,CIS,CIS,0,0,0,1,biofuels,2.2E-10,0.00000022
+Russian Federation,2010,RUS,643,CIS,CIS,0,0,0,1,biofuels,2.20E-10,0.00000022
 Russian Federation,2011,RUS,643,CIS,CIS,0,0,0,1,biofuels,0,0
 Russian Federation,2012,RUS,643,CIS,CIS,0,0,0,1,biofuels,0,0
 Russian Federation,2013,RUS,643,CIS,CIS,0,0,0,1,biofuels,0,0
@@ -43063,7 +43063,7 @@ Saudi Arabia,2005,SAU,682,Middle East,Middle East,1,0,0,0,biofuels,0,0
 Saudi Arabia,2006,SAU,682,Middle East,Middle East,1,0,0,0,biofuels,0,0
 Saudi Arabia,2007,SAU,682,Middle East,Middle East,1,0,0,0,biofuels,0,0
 Saudi Arabia,2008,SAU,682,Middle East,Middle East,1,0,0,0,biofuels,0,0
-Saudi Arabia,2009,SAU,682,Middle East,Middle East,1,0,0,0,biofuels,1.1E-13,1.1E-10
+Saudi Arabia,2009,SAU,682,Middle East,Middle East,1,0,0,0,biofuels,1.10E-13,1.10E-10
 Saudi Arabia,2010,SAU,682,Middle East,Middle East,1,0,0,0,biofuels,2.44E-13,2.44E-10
 Saudi Arabia,2011,SAU,682,Middle East,Middle East,1,0,0,0,biofuels,0,0
 Saudi Arabia,2012,SAU,682,Middle East,Middle East,1,0,0,0,biofuels,0,0
@@ -43309,7 +43309,7 @@ South Korea,1996,KOR,410,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 South Korea,1997,KOR,410,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.11E-12,1.11E-09
 South Korea,1998,KOR,410,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 South Korea,1999,KOR,410,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
-South Korea,2000,KOR,410,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.6E-11,0.000000026
+South Korea,2000,KOR,410,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,2.60E-11,0.000000026
 South Korea,2001,KOR,410,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 South Korea,2002,KOR,410,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,0,0
 South Korea,2003,KOR,410,Asia Pacific,Asia Pacific,0,0,1,0,biofuels,1.92E-11,1.92E-08
@@ -43338,7 +43338,7 @@ Spain,1969,ESP,724,Europe,Europe,0,1,1,0,biofuels,0,0
 Spain,1970,ESP,724,Europe,Europe,0,1,1,0,biofuels,0,0
 Spain,1971,ESP,724,Europe,Europe,0,1,1,0,biofuels,1.42E-12,1.42E-09
 Spain,1972,ESP,724,Europe,Europe,0,1,1,0,biofuels,0,0
-Spain,1973,ESP,724,Europe,Europe,0,1,1,0,biofuels,1.5E-11,0.000000015
+Spain,1973,ESP,724,Europe,Europe,0,1,1,0,biofuels,1.50E-11,0.000000015
 Spain,1974,ESP,724,Europe,Europe,0,1,1,0,biofuels,0,0
 Spain,1975,ESP,724,Europe,Europe,0,1,1,0,biofuels,0,0
 Spain,1976,ESP,724,Europe,Europe,0,1,1,0,biofuels,3.64E-11,3.64E-08
@@ -43452,7 +43452,7 @@ Sweden,1971,SWE,752,Europe,Europe,0,1,1,0,biofuels,0,0
 Sweden,1972,SWE,752,Europe,Europe,0,1,1,0,biofuels,0,0
 Sweden,1973,SWE,752,Europe,Europe,0,1,1,0,biofuels,1.14E-10,0.000000114
 Sweden,1974,SWE,752,Europe,Europe,0,1,1,0,biofuels,0,0
-Sweden,1975,SWE,752,Europe,Europe,0,1,1,0,biofuels,8.9E-11,0.000000089
+Sweden,1975,SWE,752,Europe,Europe,0,1,1,0,biofuels,8.90E-11,0.000000089
 Sweden,1976,SWE,752,Europe,Europe,0,1,1,0,biofuels,0,0
 Sweden,1977,SWE,752,Europe,Europe,0,1,1,0,biofuels,0,0
 Sweden,1978,SWE,752,Europe,Europe,0,1,1,0,biofuels,6.12E-11,6.12E-08
@@ -43646,8 +43646,8 @@ Thailand,1997,THA,764,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Thailand,1998,THA,764,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,9.75E-11,9.75E-08
 Thailand,1999,THA,764,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Thailand,2000,THA,764,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
-Thailand,2001,THA,764,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,6.4E-11,0.000000064
-Thailand,2002,THA,764,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,3.7E-11,0.000000037
+Thailand,2001,THA,764,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,6.40E-11,0.000000064
+Thailand,2002,THA,764,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,3.70E-11,0.000000037
 Thailand,2003,THA,764,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,2.14E-10,0.000000214
 Thailand,2004,THA,764,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0.000134,0.134
 Thailand,2005,THA,764,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0.003889173,3.889173
@@ -43746,7 +43746,7 @@ Total Asia Pacific,1985,,,,,,,,,biofuels,2.59E-09,0.00000259
 Total Asia Pacific,1986,,,,,,,,,biofuels,2.89E-09,0.00000289
 Total Asia Pacific,1987,,,,,,,,,biofuels,5.64E-09,0.00000564
 Total Asia Pacific,1988,,,,,,,,,biofuels,6.83E-09,0.00000683
-Total Asia Pacific,1989,,,,,,,,,biofuels,4.7E-09,0.0000047
+Total Asia Pacific,1989,,,,,,,,,biofuels,4.70E-09,0.0000047
 Total Asia Pacific,1990,,,,,,,,,biofuels,0,0
 Total Asia Pacific,1991,,,,,,,,,biofuels,3.97E-09,0.00000397
 Total Asia Pacific,1992,,,,,,,,,biofuels,9.39E-10,0.000000939
@@ -43855,12 +43855,12 @@ Total Central America,1982,,,,,,,,,biofuels,0,0
 Total Central America,1983,,,,,,,,,biofuels,0,0
 Total Central America,1984,,,,,,,,,biofuels,8.71E-11,8.71E-08
 Total Central America,1985,,,,,,,,,biofuels,6.28E-12,6.28E-09
-Total Central America,1986,,,,,,,,,biofuels,8E-11,0.00000008
+Total Central America,1986,,,,,,,,,biofuels,8.00E-11,0.00000008
 Total Central America,1987,,,,,,,,,biofuels,0,0
 Total Central America,1988,,,,,,,,,biofuels,2.26E-10,0.000000226
 Total Central America,1989,,,,,,,,,biofuels,0,0
 Total Central America,1990,,,,,,,,,biofuels,0,0
-Total Central America,1991,,,,,,,,,biofuels,4E-10,0.0000004
+Total Central America,1991,,,,,,,,,biofuels,4.00E-10,0.0000004
 Total Central America,1992,,,,,,,,,biofuels,1.45E-12,1.45E-09
 Total Central America,1993,,,,,,,,,biofuels,0,0
 Total Central America,1994,,,,,,,,,biofuels,0,0
@@ -43878,13 +43878,13 @@ Total Central America,2005,,,,,,,,,biofuels,0,0
 Total Central America,2006,,,,,,,,,biofuels,3.23E-11,3.23E-08
 Total Central America,2007,,,,,,,,,biofuels,6.07E-10,0.000000607
 Total Central America,2008,,,,,,,,,biofuels,0,0
-Total Central America,2009,,,,,,,,,biofuels,6.5E-10,0.00000065
+Total Central America,2009,,,,,,,,,biofuels,6.50E-10,0.00000065
 Total Central America,2010,,,,,,,,,biofuels,0,0
 Total Central America,2011,,,,,,,,,biofuels,7.73E-10,0.000000773
 Total Central America,2012,,,,,,,,,biofuels,1.17E-10,0.000000117
 Total Central America,2013,,,,,,,,,biofuels,0.000509199,0.509199
 Total Central America,2014,,,,,,,,,biofuels,0.001420399,1.420399
-Total Central America,2015,,,,,,,,,biofuels,1.7E-11,0.000000017
+Total Central America,2015,,,,,,,,,biofuels,1.70E-11,0.000000017
 Total Central America,2016,,,,,,,,,biofuels,3.43E-10,0.000000343
 Total Central America,2017,,,,,,,,,biofuels,0,0
 Total Central America,2018,,,,,,,,,biofuels,0,0
@@ -43967,7 +43967,7 @@ Total Europe,1982,,,,,,,,,biofuels,6.89E-11,6.89E-08
 Total Europe,1983,,,,,,,,,biofuels,3.53E-10,0.000000353
 Total Europe,1984,,,,,,,,,biofuels,9.16E-11,9.16E-08
 Total Europe,1985,,,,,,,,,biofuels,0,0
-Total Europe,1986,,,,,,,,,biofuels,1.3E-09,0.0000013
+Total Europe,1986,,,,,,,,,biofuels,1.30E-09,0.0000013
 Total Europe,1987,,,,,,,,,biofuels,0,0
 Total Europe,1988,,,,,,,,,biofuels,0,0
 Total Europe,1989,,,,,,,,,biofuels,0,0
@@ -44289,12 +44289,12 @@ Total OECD,1968,,,,,,,,,biofuels,0,0
 Total OECD,1969,,,,,,,,,biofuels,6.75E-09,0.00000675
 Total OECD,1970,,,,,,,,,biofuels,0,0
 Total OECD,1971,,,,,,,,,biofuels,1.01E-09,0.00000101
-Total OECD,1972,,,,,,,,,biofuels,1.5E-09,0.0000015
+Total OECD,1972,,,,,,,,,biofuels,1.50E-09,0.0000015
 Total OECD,1973,,,,,,,,,biofuels,7.51E-09,0.00000751
 Total OECD,1974,,,,,,,,,biofuels,0,0
 Total OECD,1975,,,,,,,,,biofuels,0,0
-Total OECD,1976,,,,,,,,,biofuels,2.5E-10,0.00000025
-Total OECD,1977,,,,,,,,,biofuels,3.4E-10,0.00000034
+Total OECD,1976,,,,,,,,,biofuels,2.50E-10,0.00000025
+Total OECD,1977,,,,,,,,,biofuels,3.40E-10,0.00000034
 Total OECD,1978,,,,,,,,,biofuels,0,0
 Total OECD,1979,,,,,,,,,biofuels,4.73E-09,0.00000473
 Total OECD,1980,,,,,,,,,biofuels,8.72E-09,0.00000872
@@ -44516,9 +44516,9 @@ Trinidad & Tobago,1971,TTO,780,S. & Cent. America,Caribbean,0,0,0,0,biofuels,0,0
 Trinidad & Tobago,1972,TTO,780,S. & Cent. America,Caribbean,0,0,0,0,biofuels,0,0
 Trinidad & Tobago,1973,TTO,780,S. & Cent. America,Caribbean,0,0,0,0,biofuels,0,0
 Trinidad & Tobago,1974,TTO,780,S. & Cent. America,Caribbean,0,0,0,0,biofuels,1.19E-11,1.19E-08
-Trinidad & Tobago,1975,TTO,780,S. & Cent. America,Caribbean,0,0,0,0,biofuels,5.1E-12,5.1E-09
+Trinidad & Tobago,1975,TTO,780,S. & Cent. America,Caribbean,0,0,0,0,biofuels,5.10E-12,5.10E-09
 Trinidad & Tobago,1976,TTO,780,S. & Cent. America,Caribbean,0,0,0,0,biofuels,6.11E-12,6.11E-09
-Trinidad & Tobago,1977,TTO,780,S. & Cent. America,Caribbean,0,0,0,0,biofuels,5.1E-12,5.1E-09
+Trinidad & Tobago,1977,TTO,780,S. & Cent. America,Caribbean,0,0,0,0,biofuels,5.10E-12,5.10E-09
 Trinidad & Tobago,1978,TTO,780,S. & Cent. America,Caribbean,0,0,0,0,biofuels,0,0
 Trinidad & Tobago,1979,TTO,780,S. & Cent. America,Caribbean,0,0,0,0,biofuels,0,0
 Trinidad & Tobago,1980,TTO,780,S. & Cent. America,Caribbean,0,0,0,0,biofuels,7.08E-13,7.08E-10
@@ -44569,7 +44569,7 @@ Turkey,1968,TUR,792,Europe,Europe,0,0,1,0,biofuels,9.35E-12,9.35E-09
 Turkey,1969,TUR,792,Europe,Europe,0,0,1,0,biofuels,4.96E-11,4.96E-08
 Turkey,1970,TUR,792,Europe,Europe,0,0,1,0,biofuels,0,0
 Turkey,1971,TUR,792,Europe,Europe,0,0,1,0,biofuels,0,0
-Turkey,1972,TUR,792,Europe,Europe,0,0,1,0,biofuels,5.4E-11,0.000000054
+Turkey,1972,TUR,792,Europe,Europe,0,0,1,0,biofuels,5.40E-11,0.000000054
 Turkey,1973,TUR,792,Europe,Europe,0,0,1,0,biofuels,9.94E-11,9.94E-08
 Turkey,1974,TUR,792,Europe,Europe,0,0,1,0,biofuels,0,0
 Turkey,1975,TUR,792,Europe,Europe,0,0,1,0,biofuels,0,0
@@ -44757,7 +44757,7 @@ Ukraine,2008,UKR,804,Europe,Europe,0,0,0,0,biofuels,0,0
 Ukraine,2009,UKR,804,Europe,Europe,0,0,0,0,biofuels,0,0
 Ukraine,2010,UKR,804,Europe,Europe,0,0,0,0,biofuels,0,0
 Ukraine,2011,UKR,804,Europe,Europe,0,0,0,0,biofuels,3.47E-11,3.47E-08
-Ukraine,2012,UKR,804,Europe,Europe,0,0,0,0,biofuels,8.9E-11,0.000000089
+Ukraine,2012,UKR,804,Europe,Europe,0,0,0,0,biofuels,8.90E-11,0.000000089
 Ukraine,2013,UKR,804,Europe,Europe,0,0,0,0,biofuels,0.0017688,1.7688
 Ukraine,2014,UKR,804,Europe,Europe,0,0,0,0,biofuels,0.0017152,1.7152
 Ukraine,2015,UKR,804,Europe,Europe,0,0,0,0,biofuels,0.0014204,1.4204
@@ -44817,9 +44817,9 @@ United Arab Emirates,2012,ARE,784,Middle East,Middle East,1,0,0,0,biofuels,4.48E
 United Arab Emirates,2013,ARE,784,Middle East,Middle East,1,0,0,0,biofuels,9.65E-12,9.65E-09
 United Arab Emirates,2014,ARE,784,Middle East,Middle East,1,0,0,0,biofuels,5.89E-11,5.89E-08
 United Arab Emirates,2015,ARE,784,Middle East,Middle East,1,0,0,0,biofuels,3.55E-11,3.55E-08
-United Arab Emirates,2016,ARE,784,Middle East,Middle East,1,0,0,0,biofuels,4.9E-11,0.000000049
+United Arab Emirates,2016,ARE,784,Middle East,Middle East,1,0,0,0,biofuels,4.90E-11,0.000000049
 United Arab Emirates,2017,ARE,784,Middle East,Middle East,1,0,0,0,biofuels,1.46E-10,0.000000146
-United Arab Emirates,2018,ARE,784,Middle East,Middle East,1,0,0,0,biofuels,1.6E-10,0.00000016
+United Arab Emirates,2018,ARE,784,Middle East,Middle East,1,0,0,0,biofuels,1.60E-10,0.00000016
 United Arab Emirates,2019,ARE,784,Middle East,Middle East,1,0,0,0,biofuels,1.13E-09,0.00000113
 United Arab Emirates,2020,ARE,784,Middle East,Middle East,1,0,0,0,biofuels,4.92E-11,4.92E-08
 United Kingdom,1965,GBR,826,Europe,Europe,0,0,1,0,biofuels,0,0
@@ -44854,7 +44854,7 @@ United Kingdom,1993,GBR,826,Europe,Europe,0,0,1,0,biofuels,0,0
 United Kingdom,1994,GBR,826,Europe,Europe,0,0,1,0,biofuels,2.59E-10,0.000000259
 United Kingdom,1995,GBR,826,Europe,Europe,0,0,1,0,biofuels,2.49E-10,0.000000249
 United Kingdom,1996,GBR,826,Europe,Europe,0,0,1,0,biofuels,0,0
-United Kingdom,1997,GBR,826,Europe,Europe,0,0,1,0,biofuels,9.6E-10,0.00000096
+United Kingdom,1997,GBR,826,Europe,Europe,0,0,1,0,biofuels,9.60E-10,0.00000096
 United Kingdom,1998,GBR,826,Europe,Europe,0,0,1,0,biofuels,6.62E-10,0.000000662
 United Kingdom,1999,GBR,826,Europe,Europe,0,0,1,0,biofuels,0,0
 United Kingdom,2000,GBR,826,Europe,Europe,0,0,1,0,biofuels,2.07E-09,0.00000207
@@ -45011,7 +45011,7 @@ Vietnam,2002,VNM,704,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Vietnam,2003,VNM,704,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Vietnam,2004,VNM,704,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Vietnam,2005,VNM,704,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
-Vietnam,2006,VNM,704,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,2.8E-12,2.8E-09
+Vietnam,2006,VNM,704,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,2.80E-12,2.80E-09
 Vietnam,2007,VNM,704,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Vietnam,2008,VNM,704,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,0,0
 Vietnam,2009,VNM,704,Asia Pacific,Asia Pacific,0,0,0,0,biofuels,9.77E-12,9.77E-09
