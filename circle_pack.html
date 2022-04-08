@@ -309,9 +309,14 @@
             
             function zoomIn(v) {
                 currentView = v;
-                var k = diameter / v[2]; currentView = v;
-                node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
-                circle.attr("r", function(d) { return d.r * k; });
+                var p = diameter / v[2];
+                currentView = v;
+                node.attr("transform", function(d) { 
+                    return "translate(" + (d.x - v[0]) * p + "," + (d.y - v[1]) * p + ")";
+                });
+                circle.attr("r", function(d) { 
+                    return d.r * p; 
+                });
             }
         });
         
