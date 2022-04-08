@@ -20,29 +20,26 @@
 </head>
 <body>
     <style>
-
-        .node {
-          cursor: pointer;
-        }
-        
-        .node:hover {
+       
+        .circle:hover {
           stroke: #000;
           stroke-width: 1.5px;
         }
         
-        .node--leaf {
+        .circle-node {
           fill: white;
         }
         
         .label {
-          font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-family: Open Sans, sans-serif;
+          font-size: 11px;
           text-anchor: middle;
           text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
         }
         
         .label,
-        .node--root,
-        .node--leaf {
+        .circle-root,
+        .circle-node {
           pointer-events: none;
         }
         
@@ -193,20 +190,18 @@
             var circle = g.selectAll("circle")
                 .data(nodes)
                 .enter().append("circle")
-                .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
-/*                 .attr("class", function(d) {
+                .attr("class", function(d) {
                     console.log("depth: ", d);
-                    if(d.depth == 1) {
-                        return "node";
+                    if(d.parent) {
+                        if(d.children) {
+                            return "circle";
+                        }
+                        return "circle-node";                        
                     }
-                    else if(d.depth == 2) {
-                        console.log("2: ", d)
-                        return "node node--leaf";
+                    else {
+                        "circle-root"
                     }
-                    else if(d.depth == 3) {
-                        console.log("depth2: ", d.depth);
-                        return "node node--leaf";
-                    }}) */
+                })
                 .style("fill", function(d) { 
                     
                     if(d.children) {
