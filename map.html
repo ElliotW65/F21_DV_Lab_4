@@ -225,7 +225,6 @@
                 var radius = Math.min(300, 300/ 2);
 
 
-
                 let animatPie = d3.interval(function() {
 
                     yearSlice = data.filter(d => d.Year == year && !isNaN(d.Value))
@@ -267,6 +266,30 @@
                             return arc(d);
                         }
                         });
+
+                    var legendG = svg.selectAll(".legend") // note appending it to mySvg and not svg to make positioning easier
+                        .data(pie(data))
+                        .enter().append("g")
+                        .attr("transform", function(d,i){
+                            return "translate(" + ((popupWidth-10) - 110) + "," + (i * 15 + 20) + ")"; // place each legend on the right and bump each one down 15 pixels
+                        })
+                        .attr("class", "legend");
+
+                    legendG.append("rect") // make a matching color rect
+                        .attr("width", 10)
+                        .attr("height", 10)
+                        .attr("fill", function(d, i) {
+                            return pieColor(i);
+                        });
+
+                    legendG.append("text") // add the text
+                        .text(function(d){
+                            console.log(d);
+                            return d.data.Category;
+                        })
+                        .style("font-size", 12)
+                        .attr("y", 10)
+                        .attr("x", 11);
 
                     var updatePath = path.attr("d", arc)
                         .transition()
