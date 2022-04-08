@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lab 4</title>
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+        <script src='https://d3js.org/d3.v7.min.js'></script>
+
+        <style>
+            body { margin: 0; padding: 0; }
+            #map { position: absolute; top: 0; bottom: 0; height: 100%; width: 100%; }
+            div.bar-container {position: absolute; margin: 0 auto;}
+            div.pop-up {	
+                position: absolute;
+                margin: 0 auto;		
+                text-align: center;			
+                width: 500px;					
+                height: 300px;					
+                padding: 2px;
+                color: black;	
+                background: white;	
+                border: 0px;		
+                border-radius: 8px;					
+                font-family: 'Roboto', sans-serif;
+            }
+
+            h2.pie-header {
+                text-align: left;
+                padding-left: 2%;
+
+            }
+
+            .pie-year { font-family: Open Sans, sans-serif;
+                        font-size: 30px;
+                        font-weight: 400;
+                        opacity: 0.5;}
+
+            .pie-header { font-family: Open Sans, sans-serif;
+                        font-size: 15px;
+                        font-weight: 40000;
+                        opacity: 0.75;}
+
+            .labels { font-family: Open Sans, sans-serif;
+                        font-weight: 400;
+
+            }
+
+        </style>
+
+    <body>
+        <div id="map"></div>
+
+        <script>
+
+            var currentCountry = "Argentina";
+
+
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZWxsaW90dzY1IiwiYSI6ImNrbGk0amV4MTA5bHUycW5tN2JzM3J0bTIifQ.OGT4ltSNZ7vyd_yEUg8afQ';
+            const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-3, 54],
+            zoom: 1
+            });
+
+
+            // Function to map real world coordinates to their position on the map
+            function project(data) {
+                return map.project(new mapboxgl.LngLat(data[0], data[1]));
+            }  
+
+
+
+
+            var link = "https://api.mapbox.com/geocoding/v5/mapbox.places/United%20Kingdom.json?access_token=pk.eyJ1IjoiZWxsaW90dzY1IiwiYSI6ImNrbGk0amV4MTA5bHUycW5tN2JzM3J0bTIifQ.OGT4ltSNZ7vyd_yEUg8afQ"
+
+            function urlFormat(e) {
+                var coords = [e.lngLat.lng, e.lngLat.lat]
+
+                return coords;
+            }
+
+            function urlBuilder(country) {
+                    var countryFormat = urlFormat(country);
+                    var urlPrefix = "https://api.mapbox.com/geocoding/v5/mapbox.places/";
+                    var accessToken = ".json?access_token=pk.eyJ1IjoiZWxsaW90dzY1IiwiYSI6ImNrbGk0amV4MTA5bHUycW5tN2JzM3J0bTIifQ.OGT4ltSNZ7vyd_yEUg8afQ";
+                    return urlPrefix + countryFormat[0] + "," + countryFormat[1] + accessToken;
+            }
+
+            function httpGetAsync(country, callback) {
+                var URL = urlBuilder(country);
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.onreadystatechange = function() { 
+                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                        callback(xmlHttp.responseText, country);
+                }
+                xmlHttp.open("GET", URL, true); // true for asynchronous 
+                xmlHttp.send(null);
+            }
+
+
+            function returnCenter(data) {
+                
+                const info = JSON.parse(data);
+
+                for(i of info.features) {
+                    if(i.place_type[0] == "country") {
+                        var country = i.place_name;
+                    }
+                }
+            }
+
+
+            d3.csv('final data.csv').then(function(data) {
+
+                function groupByCountry(data) {
+                    const newGroups = data.reduce(function(groups, item) {
+                    const group = (groups[item.Country] || []);
+                    group.push(item);
+                    groups[item.Country] = group;
+                    return groups;
+                    }, {});
+
+                    return newGroups;
+                }
+
+                function groupByYear(data) {
+                    const newGroups = data.reduce(function(groups, item) {
+                    const group = (groups[item.Year] || []);
+                    group.push(item);
+                    groups[item.Year] = group;
+                    return groups;
+                    }, {});
+
+                    return newGroups;
+                }
+
+                var countryData = groupByCountry(data);
+
+                map.on('click', function(e) {
+
+                    var coords = [e.lngLat.lng, e.lngLat.lat]
+
+                    httpGetAsync(e, returnCenter);
+
+                    function returnCenter(data) {
+                
+                        const info = JSON.parse(data);
+
+
+                        for(i of info.features) {
+                            if(i.place_type[0] == "country") {
+                                var country = i.place_name;
+                            }
+                        }
+
+                        const displayData = countryData[country];
+
+                        new mapboxgl.Popup()
+                            .setLngLat(e.lngLat)
+                            .setHTML("<div class='pop-up'</div>")
+                            .addTo(map);
+
+                        popupBuilder(displayData, country)
+
+
+
+
+                    }
+
+                });
+
+            });
+
+
+            function popupBuilder(data, country) {
+
+                var parentPopUp = document.getElementsByClassName("pop-up")[0];
+
+                var popupWidth = parentPopUp.offsetWidth;
+
+                var popupHeight = parentPopUp.offsetHeight;
+
+/*                 var barContainer = d3.select("div.pop-up").append("div")
+                        .classed("bar-container", true)
+                        .attr("width", popupWidth)
+                        .attr("height", popupHeight); */
+
+                var header = d3.select("div.pop-up").append("h2")
+                        .classed("pie-header", true)
+                        .text("Electricity Consumption By Type Since 1965 (PJ): " + country);
+
+                var svg = d3.select("div.pop-up").append("svg")
+                        .classed("pie-container", true)
+                        .attr("width", popupWidth-10)
+                        .attr("height", popupHeight - 60);
+
+                var g = svg.append("g")
+                    .attr('transform', 'translate(' + (popupWidth-10)/2 +  ',' + (popupHeight - 60)/2 +')');
+
+                var year = 1965;
+
+                var top_n = 12;
+
+                data.forEach(d => {
+                    d.Value = +d.Value,
+                    d.lastValue = +d.lastValue,
+                    d.Value = isNaN(d.Value) ? 0 : d.Value,
+                    d.Year = +d.Year,
+                    d.colour = d3.hsl(Math.random()*360,0.75,0.75)
+                });
+
+                yearSlice = data.filter(d => d.Year == year && !isNaN(d.Value))
+                        .sort((a,b) => b.Value - a.Value)
+                        .slice(0,top_n);
+
+                var yearText = g.append("text")
+                        .classed("pie-year", true)
+                        .attr("text-anchor", "middle")
+                        .attr('transform', 'translate(' + 0 +  ',' + 10 +')')
+                        .text(year);
+
+                console.log(yearSlice);
+
+
+
+                // Set colour scheme of pie chart
+                var pieColor = d3.scaleOrdinal().range(d3.schemeSet3);
+
+                var radius = Math.min(300, 300/ 2);
+
+                var pie = d3.pie().value(function(d) {
+                            return d.Value; 
+                        });
+
+                var arc = d3.arc()
+                    .innerRadius(radius - 100)
+                    .outerRadius(radius - 50);
+
+                var path = g.selectAll("path")
+                .data(pie(yearSlice))
+
+                yearText.text(year);
+
+                var enterPath = path.enter().append('g').classed("arcG", true).append("path")
+                    .transition()
+                    .duration(500)
+                    .attr("fill", function(d, i) { return pieColor(i); })
+                    .attr("d", arc)
+                    .attrTween("d", function (d) {
+                        var i = d3.interpolate(d.endAngle, d.startAngle);
+                        return function (t) {
+                        d.startAngle = i(t);
+                        return arc(d);
+                    }
+                });
+
+                var textG = g.selectAll(".labels")
+                    .data(pie(yearSlice))
+                    .enter().append("g")
+                    .attr("class", "labels");
+
+                    // Append text labels to each arc
+                textG.append("text")
+                    .attr("transform", function(d) {
+                        return "translate(" + arc.centroid(d) + ")";
+                    })
+                    .attr("dy", ".35em")
+                    .style("text-anchor", "middle")
+                    .attr("fill", "#3A3B3C")
+                    .text(function(d, i) {
+                        return Math.round(d.data.Value * 100)/100;
+                    });
+
+
+                var legendG = svg.selectAll(".legend") // note appending it to mySvg and not svg to make positioning easier
+                    .data(pie(yearSlice))
+                    .enter().append("g")
+                    .attr("transform", function(d,i){
+                        return "translate(" + ((popupWidth-10) - 125) + "," + (i * 15 + 20) + ")"; // place each legend on the right and bump each one down 15 pixels
+                    })
+                    .attr("class", "legend");
+
+                legendG.append("rect") // make a matching color rect
+                    .attr("width", 10)
+                    .attr("height", 10)
+                    .attr("fill", function(d, i) {
+                        return pieColor(i);
+                    });
+
+                legendG.append("text") // add the text
+                    .text(function(d){
+                        return d.data.Category;
+                    })
+                    .style("font-size", 12)
+                    .attr("y", 10)
+                    .attr("x", 11)
+                    .classed("legend-values", true);
+
+
+                let animatPie = d3.interval(function() {                    
+
+                    yearSlice = data.filter(d => d.Year == year && !isNaN(d.Value))
+                        .sort((a,b) => b.Value - a.Value)
+                        .slice(0,top_n);
+
+                    updatePie(yearSlice);
+
+                    if(year == 2020) {animatPie.stop()}
+
+                    year += 1;
+                }, 1000);
+
+                                // Function to update the pie chart
+                function updatePie(data) {
+
+                    yearText.text(year);
+
+                    path = g.selectAll("path")
+                        .data(pie(data))
+                    
+                    path.enter().append('g').classed("arcG", true).append("path")
+                        .transition()
+                        .duration(500)
+                        .attr("fill", function(d, i) { return pieColor(i); })
+                        .attr("d", arc)
+                        .attrTween("d", function (d) {
+                            var i = d3.interpolate(d.endAngle, d.startAngle);
+                            return function (t) {
+                            d.startAngle = i(t);
+                            return arc(d);
+                        }
+                    })
+
+                    var updatePath = path.attr("d", arc)
+                        .transition()
+                        .duration(1000)
+                        .attrTween("d", tweenFunction)
+
+                    textG.data(pie(yearSlice))
+                        .enter().append("g")
+                        .attr("class", "labels");
+
+                    textG.select("text")
+                        .attr("transform", function(d) {
+                            return "translate(" + arc.centroid(d) + ")";
+                        })
+                        .attr("dy", ".35em")
+                        .style("text-anchor", "middle")
+                        .attr("fill", "#3A3B3C")
+                        .text(function(d, i) {
+                            return Math.round(d.data.Value * 100)/100;
+                        })
+                        .transition()
+                        .duration(500);
+
+/*                     textG.append("text")
+
+                        .attr("dy", ".35em")
+                        .style("text-anchor", "middle")
+                        .attr("fill", "#3A3B3C")
+                        .text(function(d, i) {
+                            console.log(d);
+                            return Math.round(d.data.Value * 100)/100;
+                    }) */
+
+
+                };
+
+                function tweenFunction(newAngle) {
+                        var inter = d3.interpolate(this.currentAngle, newAngle);
+                        this.currentAngle = inter(0);
+                        return function(t) {
+                            return arc(inter(t)); 
+                        };
+                }
+            }
+
+
+
+
+
+
+
+
+
+    
+
+
+        </script>
+
+    </head>
