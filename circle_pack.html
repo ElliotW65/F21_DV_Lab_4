@@ -182,9 +182,9 @@
                 .sum(function(d) { console.log("d: ", d); return d.value; })
                 .sort(function(a, b) { return b.value - a.value; });
             
-            var focus = root,
+            var zoomTarget = root,
                 nodes = pack(root).descendants(),
-                view;
+                currentView;
 
             console.log("nodes: ", nodes);
             
@@ -193,7 +193,7 @@
                 .enter().append("circle")
                 .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
                 .style("fill", function(d) { return d.children ? color(d.depth) : null; })
-                .on("click", function(d) { if (focus !== d.target.__data__) zoom(d), d.stopPropagation(); });
+                .on("click", function(d) { if (zoomTarget !== d.target.__data__) zoom(d), d.stopPropagation(); });
             
             var text = g.selectAll("text")
                 .data(nodes)
@@ -205,45 +205,51 @@
             
             var node = g.selectAll("circle,text");
             
-            svg
-                .style("background", color(-1))
+            svg.style("background", color(-1))
                 .on("click", function() { zoom(root); });
             
             zoomTo([root.x, root.y, root.r * 2 + margin]);
 
-            console.log("Focus: ", focus);
+            console.log("zoomTarget: ", zoomTarget);
             
             function zoom(d) {
-                var focus0 = focus;
-                console.log("Zoom focus: ", d);
+                var zoomTarget0 = zoomTarget;
+                console.log("Zoom zoomTarget: ", d);
                 if(d.depth == 0) {
-                    focus = d
+                    zoomTarget = d
                 }
                 else if(d.target.__data__) {
-                    focus = d.target.__data__;
+                    zoomTarget = d.target.__data__;
                 }
                 
 
-                console.log(focus);
+                console.log(zoomTarget);
             
-                var transition = d3.transition()
-                    .duration(d.altKey ? 7500 : 750)
+                var zoom = d3.transition()
+                    .duration(600)
                     .tween("zoom", function(d) {
-                    var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
+                    var i = d3.interpolateZoom(currentView, [zoomTarget.x, zoomTarget.y, zoomTarget.r * 2 + margin]);
                     return function(t) { console.log("t: ", i(t)); zoomTo(i(t)); };
                     });
             
-                transition.selectAll("text")
-                .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
-                    .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
-                    .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
-                    .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
-            }
+                zoom.selectAll("text")
+                    .filter(function(d) { 
+                        return d.parent === zoomTarget || this.style.display === "inline"; 
+                    })
+                    .style("fill-opacity", function(d) { 
+                        return d.parent === zoomTarget ? 1 : 0; 
+                    })
+                    .on("start", function(d) { 
+                        if (d.parent === zoomTarget) this.style.display = "inline";
+                    })
+                    .on("end", function(d) { 
+                        if (d.parent !== zoomTarget) this.style.display = "none";
+                    });
+                }
             
             function zoomTo(v) {
-                view = v;
-                console.log("view:", view);
-                var k = diameter / v[2]; view = v;
+                currentView = v;
+                var k = diameter / v[2]; currentView = v;
                 node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
                 circle.attr("r", function(d) { return d.r * k; });
             }
