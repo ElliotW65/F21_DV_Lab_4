@@ -44,8 +44,7 @@
 
             .labels { font-family: Open Sans, sans-serif;
                         font-weight: 400;
-
-            }
+                        opacity: 0.75;}
 
         </style>
 
@@ -344,6 +343,8 @@
                         .attr("class", "labels");
 
                     textG.select("text")
+                        .transition()
+                        .duration(1000)
                         .attr("transform", function(d) {
                             return "translate(" + arc.centroid(d) + ")";
                         })
@@ -352,9 +353,8 @@
                         .attr("fill", "#3A3B3C")
                         .text(function(d, i) {
                             return Math.round(d.data.Value * 100)/100;
-                        })
-                        .transition()
-                        .duration(500);
+                        });
+
 
 /*                     textG.append("text")
 
