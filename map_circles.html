@@ -307,23 +307,23 @@
                         return Math.round(d.data.Value * 100)/100;
                     });
 
-
-                var legend = svg.selectAll(".legend") // note appending it to mySvg and not svg to make positioning easier
+                // Create and add a lgened to the pie chart
+                var legend = svg.selectAll(".legend")
                     .data(pie(yearData))
                     .enter().append("g")
                     .attr("transform", function(d,i){
-                        return "translate(" + ((popupWidth-10) - 125) + "," + (i * 15 + 20) + ")"; // place each legend on the right and bump each one down 15 pixels
+                        return "translate(" + ((popupWidth-10) - 125) + "," + (i * 15 + 20) + ")";
                     })
                     .attr("class", "legend");
 
-                legend.append("rect") // make a matching color rect
+                legend.append("rect")
                     .attr("width", 10)
                     .attr("height", 10)
                     .attr("fill", function(d, i) {
                         return pieColor(i);
                     });
 
-                legend.append("text") // add the text
+                legend.append("text")
                     .text(function(d){
                         return d.data.Category;
                     })
@@ -332,7 +332,8 @@
                     .attr("x", 11)
                     .classed("legend-values", true);
 
-
+                // Set an interval and every second, update the year and take data
+                // for the new year, then update the pie chart with the new data.
                 let animatPie = d3.interval(function() {                    
 
                     yearData = data.filter(d => d.Year == year && !isNaN(d.Value))
@@ -346,14 +347,17 @@
                     year += 1;
                 }, 1000);
 
-                                // Function to update the pie chart
+                // Function to update the pie chart
                 function updatePie(data) {
 
+                    // Update the year in the centre
                     yearText.text(year);
-
+                    
+                    // Update the pie data
                     path = g.selectAll("path")
                         .data(pie(data))
                     
+                    // Update the pie arcs
                     path.enter().append('g').classed("arcG", true).append("path")
                         .transition()
                         .duration(500)
@@ -372,6 +376,7 @@
                         .duration(1000)
                         .attrTween("d", tweenFunction)
 
+                    // Update the value labels
                     pieLabel.data(pie(yearData))
                         .enter().append("g")
                         .attr("class", "labels");
@@ -391,6 +396,7 @@
 
                 };
 
+                // Function to smoothly update the segments of the pie chart when new data is used 
                 function tweenFunction(newAngle) {
                         var inter = d3.interpolate(this.currentAngle, newAngle);
                         this.currentAngle = inter(0);
@@ -398,24 +404,30 @@
                             return arc(inter(t)); 
                         };
                 }
+
+                // Call the function that will build the circle chart
                 circlePackBuilder(circleSVG, circleG, yearlyData);
             }
 
+            // Functio to build the circle chart and place it in the popup
             function circlePackBuilder(newsvg, newG, data) {
                 
                 var margin = 20;
                 var diameter = +newsvg.attr("width")
 
+                // Set the colour scheme for the circle chart
                 var color = d3.scaleLinear().domain([-1,3])
                     .range(["rgb(34,139,34)", "white"])
 
-        
+                // Initialise pack layout
                 var pack = d3.pack()
                     .size([diameter - margin, diameter - margin])
                     .padding(2);
-                
+
+                // Take data from 2020 for the current country                
                 var data = data["2020"];
 
+                // Convert the numeric data values stored as string to number
                 data.forEach(d => {
                     d.Value = +d.Value,
                     d.PJ = +d.PJ,
@@ -424,6 +436,8 @@
                     d.colour = d3.hsl(Math.random()*360,0.75,0.75)
                 })
 
+                // Create a skeleton hierarchy that can be populated with values form the
+                // country selected by the user.
                 var nonRenewables = ["coal","gas","oil"]
                 var renewables = ["hydro","biogeo","biofuels","solar","wind"]
                 var hierarchy = {
@@ -458,6 +472,7 @@
                 var otherTotal = 0;
                 var renTotal = 0;
 
+                // Total values for aggregated values
                 for(i of data) {
                     if(nonRenewables.includes(i.Category)) {
                         for(o of hierarchy.children[0].children[0].children) {
@@ -490,7 +505,8 @@
                 hierarchy.value = fossilTotal + otherTotal + renTotal;
 
                 var data = hierarchy;
-            
+
+                // Create the hierarchy from the hierarchy object            
                 var root = d3.hierarchy(data)
                     .sum(function(d) { 
                         return d.value; 
@@ -502,7 +518,8 @@
                 var zoomTarget = root,
                     nodes = pack(root).descendants(),
                     currentView;
-                
+
+                // Create circles                
                 var circle = newG.selectAll("circle")
                     .data(nodes)
                     .enter().append("circle")
@@ -534,6 +551,7 @@
                         
                     });
                 
+                // Add text labels to the circles
                 var text = newG.selectAll("text")
                     .data(nodes)
                     .enter().append("text")
@@ -562,11 +580,16 @@
                 
                 var node = newG.selectAll("circle,text");
                 
-                newsvg.on("click", function() { zoom(root); });
+                // When the user clicks on a circle, zoom to that circle
+                newsvg.on("click", function() {
+                     zoom(root); 
+                    });
                 
                 zoomIn([root.x, root.y, root.r * 2 + margin]);
                 
+                // Function to zoom to selected circle
                 function zoom(d) {
+
                     var zoomTarget0 = zoomTarget;
                     if(d.depth == 0) {
                         zoomTarget = d
@@ -579,7 +602,9 @@
                         .duration(600)
                         .tween("zoom", function(d) {
                             var i = d3.interpolateZoom(currentView, [zoomTarget.x, zoomTarget.y, zoomTarget.r * 2 + margin]);
-                            return function(t) { zoomIn(i(t)); };
+                            return function(t) {
+                                zoomIn(i(t)); 
+                            };
                         });
                 
                     zoom.selectAll("text.label")
@@ -612,6 +637,8 @@
                         });
                     }
                 
+                // Function to smoothly zoom to selected circle view
+                // using interpolated values as inputs
                 function zoomIn(v) {
                     currentView = v;
                     var p = diameter / v[2];
